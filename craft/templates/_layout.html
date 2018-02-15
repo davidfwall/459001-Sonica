@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	{% hook 'seomaticRender' %}
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="{{ siteUrl }}assets/css/font.css">
+	<link rel="stylesheet" href="{{ siteUrl }}assets/css/social-icons.css">
+	<link rel="stylesheet" href="{{ siteUrl }}assets/css/reset.css">
+	<link rel="stylesheet" href="{{ siteUrl }}assets/css/social-icons.css" />
+	<link rel="stylesheet" href="{{ siteUrl }}assets/css/animations.css">
+	<link rel="stylesheet" href="{{ siteUrl }}assets/css/vh.css">
+	<link rel="stylesheet" href="{{ siteUrl }}assets/css/mobile.css">
+	<link rel="stylesheet" href="{{ siteUrl }}assets/css/type.css">
+	<link rel="stylesheet" href="{{ siteUrl }}assets/css/grid-twelve.css" />
+	<link rel="stylesheet" href="{{ siteUrl }}assets/css/form.css" />
+	<link rel="stylesheet" href="{{ siteUrl }}assets/css/clocks.css" />
+	<link rel="stylesheet" href="{{ siteUrl }}assets/css/flickity.css" />
+	<link rel="stylesheet" href="{{ siteUrl }}assets/css/app.css" />
+	<link rel="stylesheet" href="{{ siteUrl }}assets/css/app.css" />
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="{{ siteUrl }}assets/css/ie.css">
+	<![endif]-->
+	
+	<script src="{{ siteUrl }}assets/js/modernizr.foundation.js"></script>
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="{{ siteUrl }}assets/js/html5shiv.min.js"></script>
+	<![endif]-->
+
+<!-- Jquery -->
+<script src="{{ siteUrl }}assets/js/jquery.min.js"></script>
+
+</head>
+
+<body class="{% if bodyClass is defined %}{{ bodyClass }}{% endif %} topinview">
+	<div id="container">
+
+		{% include "_includes/header" %}
+
+		<main id="content">
+		<div class="wrapper">
+		{% block content %}
+		{% endblock %}
+		</div>
+		</main>
+
+		{% include "_includes/footer" %}
+
+	</div>
+	
+
+
+
+<!-- inview -->
+<script src="{{ siteUrl }}assets/js/jquery.inview.min.js"></script>
+<script src="{{ siteUrl }}assets/js/twitterFetcher_min.js"></script>
+
+
+
+<script src="{{ siteUrl }}assets/js/responsiveslides.min.js"></script>
+ <script>
+    $(function () {
+
+      // Slideshow 1
+      $("#homeslide").responsiveSlides({
+        speed: 1200,
+        timeout: 6200,
+        
+      });
+
+    });
+  </script>
+
+<script>
+
+var colors = new Array(
+
+[113,164,196],
+[148,148,172],
+[183,132,147],
+[219,115,123],
+[254,99,99],
+[77,181,220]);
+
+var step = 0;
+//color table indices for: 
+// current color left
+// next color left
+// current color right
+// next color right
+var colorIndices = [0,1,2,3];
+
+//transition speed
+var gradientSpeed = 0.002;
+
+function updateGradient()
+{
+  
+  if ( $===undefined ) return;
+  
+var c0_0 = colors[colorIndices[0]];
+var c0_1 = colors[colorIndices[1]];
+var c1_0 = colors[colorIndices[2]];
+var c1_1 = colors[colorIndices[3]];
+
+var istep = 1 - step;
+var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
+var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
+var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
+var color1 = "rgb("+r1+","+g1+","+b1+")";
+
+var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
+var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
+var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
+var color2 = "rgb("+r2+","+g2+","+b2+")";
+
+ $('#gradient').css({
+   background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
+    background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
+  
+  step += gradientSpeed;
+  if ( step >= 1 )
+  {
+    step %= 1;
+    colorIndices[0] = colorIndices[1];
+    colorIndices[2] = colorIndices[3];
+    
+    //pick two new target color indices
+    //do not pick the same as the current one
+    colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+    colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+    
+  }
+}
+
+setInterval(updateGradient,10);
+
+</script>
+
+
+
+<script src="{{ siteUrl }}assets/js/moment.js"></script>
+<script src="{{ siteUrl }}assets/js/moment-timezone-with-data.js"></script>
+<script src="{{ siteUrl }}assets/js/clock.js"></script>
+
+<script src="{{ siteUrl }}assets/js/flickity.pkgd.min.js"></script>
+<script>
+$('.carousel').flickity({
+  // options
+  cellAlign: 'left',
+  contain: true,
+  wrapAround: true,
+  pageDots: false
+
+});
+
+</script>
+
+
+<script>
+$('.topsection').bind('inview', function (event, visible, top) {
+  if (visible == true) {
+    $('body').addClass( "topinview" );
+  } else {
+    $('body').removeClass( "topinview" );
+  }
+});
+
+$('.fadein, .fadeup').bind('inview', function (event, visible, topOrBottomOrBoth) {
+  if (visible == true) {
+    $(this).addClass( "inview" );
+    if (topOrBottomOrBoth == 'top') {
+      // top part of element is visible
+    } else if (topOrBottomOrBoth == 'bottom') {
+      // bottom part of element is visible
+    } else {
+      // whole part of element is visible
+    }
+  } else {
+    $(this).removeClass( "inview" );
+  }
+});
+</script>
+
+
+<script>
+        $(document).ready(function() {
+          $('body').addClass('loaded');
+        });    
+</script>
+
+<script>
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 50
+        }, 650);
+        return false;
+      }
+    }
+  });
+});
+
+
+     $(".m-menu-toggle, .m-menu-bg-dark").click(function(){
+      event.preventDefault();
+      $("body").toggleClass("mopen");
+     });
+ </script>
+
+<script>
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}
+</script>
+
+
+</body>
+</html>

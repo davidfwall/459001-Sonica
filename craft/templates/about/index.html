@@ -1,0 +1,146 @@
+{# About #}
+
+{% extends "_layout" %}
+{% set bodyClass = "white menu-black" %}
+{% block content %}
+
+<div class="page bg-black white">
+<div class="top-image">
+	<div class="five columns"></div>
+	<div class="seven columns"><img src="{% for asset in entry.headerImage %}{{ asset.url }}{% endfor %}" alt="{{entry.title}}" /></div>
+</div>
+
+<div class="m-block">
+
+<div class="row pad-top-40 m-pad-top-30">
+	<h1 class="sc red">{{entry.title}}&mdash;</h1>
+</div>
+
+<div class="row pad-top-2 m-pad-top-5 vh-55 fade-in-up ">
+	<div class="three columns">
+			<h1 class="text-xlarge topsection">{{ entry.heading | raw }}</h1>
+	</div>
+</div>
+
+<div class="row vh-35 m-pad-top-50 m-pad-bottom-10">
+	<div class="five columns offset-by-six end">
+	<p>{{ entry.intro |widont|striptags|raw}}</p>
+	</div>
+</div>
+
+<div class="row pad-top-5 m-pad-bottom-5">
+	<div class="eight columns centered">
+			<h3 class="text-medium text-centered">{{ entry.servicesIntroduction |widont|striptags|raw }}</h3>
+	</div>
+</div>
+
+<div class="row pad-top-10">
+	<div class="ten columns centered">
+		<ul class="block-grid three-up mobile text-small">
+		{% for entry in craft.entries.section('services') %}
+		<li>
+			<img src="{% for asset in entry.image %}{{ asset.url }}{% endfor %}" alt="{{ entry.title }}" width="50px" />
+			<div class="row">
+				<div class="ten columns offset-by-one">
+					<h4 class="blue pad-top-2 m-text-regular">{{ entry.title }}</h4>
+					<p class="white m-text-regular">{{ entry.description |widont|striptags|raw }}</p>
+					<p class="white pad-top-2 text-mono m-text-regular">{{ entry.note |striptags|raw }}</p>
+				</div>
+			</div>
+		</li>
+		{% endfor %}
+		</ul>
+	</div>
+</div>
+
+	<div class="dw-shapes dw-shapes-box-blue-dot-right vh-300"></div>
+
+
+<div class="row pad-top-25 m-pad-top-15 m-pad-bottom-5">
+	<div class="eight columns centered">
+			<h3 class="text-medium text-centered">Departments</h3>
+	</div>
+</div>
+
+
+<div class="row pad-top-10">
+	<div class="nine columns centered">
+		<ul class="block-grid two-up mobile">
+		{% for entry in craft.entries.section('departments') %}
+		<li class="">
+			<h4 class="red">{{ entry.title }}</h4>
+			<span class="white">{{ entry.description |striptags|raw }}</span>
+			<br /><br />
+		</li>
+		{% endfor %}
+		</ul>
+	</div>
+</div>
+
+
+<div class="row pad-top-25 m-pad-bottom-5">
+	<div class="ten columns centered">
+			<h3 class="text-medium text-centered">Locations</h3>
+	</div>
+</div>
+
+</div><!--End mblock-->
+	
+	<div class="dw-shapes dw-shapes-circle-red-dot-left vh-200"></div>
+	
+	<div class="m-pad-bottom-5">
+		<div class="carousel">
+		{% for asset in entry.locationsImages %}
+			<div class="locations-carousel-cell vh-100">
+				<img src="{{ asset.url }}" alt="location image" />
+			</div>
+		{% endfor %}
+		</div>
+	</div>
+ 	 
+ <div class="m-block">
+ 
+
+<div class="row pad-top-5">
+	<div class="ten columns centered">
+		<ul class="block-grid three-up mobile text-small">
+		{% for entry in craft.entries.section('locations') %}
+		<li>
+			<h4 class="blue m-text-regular">{{ entry.title }}</h4>
+			<p class="white m-text-regular">{{ entry.description |striptags|raw }}</p>
+		</li>
+		{% endfor %}
+		</ul>
+	</div>
+</div>
+
+<div class="row pad-top-25 m-pad-top-15 m-pad-bottom-5">
+	<div class="eight columns centered">
+			<h3 class="text-medium text-centered">Leadership Team</h3>
+	</div>
+</div>
+
+<div class="row pad-top-5 pad-bottom-15">
+	<div class="twelve columns">
+		<ul class="block-grid two-up mobile">
+			{% for entry in craft.entries.section('leadershipTeam') %}
+			<li>
+				<img src="{% for asset in entry.image %}{{ asset.url }}{% endfor %}" alt="" />
+				<div class="row pad-bottom-5 m-pad-bottom-5"> 
+					<div class="eight columns offset-by-two">
+						<h4 class="white pad-top-2 text-small m-text-regular">{{ entry.title }}</h4>
+						<p class="white text-mono m-text-regular">{{ entry.note }}</p>
+					</div>
+				</div>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+
+
+
+
+</div><!--End mblock-->
+</div><!--End Page-->
+{% endblock %}

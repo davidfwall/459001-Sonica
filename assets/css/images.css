@@ -1,0 +1,296 @@
+/*------------------------
+	Image Blocks
+-------------------------*/
+.image-photo{}
+.image-drawing{}
+.image-render{}
+.image-model{}
+
+/*------------------------
+	Image Sizes etc
+-------------------------*/
+.image{
+	max-width: 100%; 
+		padding-bottom: 2.5vh;
+	
+}
+
+.image-fullwidth{}
+.image-large{}
+.image-medium{}
+.image-small{}
+.image-group{}
+
+@media (max-width: 768px) {
+.image{
+	padding-bottom: 2.5vh;
+		max-width: 100%; 
+	
+}
+}
+
+/*------------------------
+	Image Group Irregular
+
+ul.image-group{
+padding-left: 10%;
+}
+ul.image-group li{
+	padding: 0 0 1% 1%;
+	display: inline-block;
+	float: left;
+	line-height: 0;
+	
+}
+ul.image-group li:nth-child(2n+1) { clear: both; }
+
+ul.image-group li { width: 55.5%;}
+ul.image-group li:nth-child(2n) { width: 33.3%;}
+ul.image-group li:nth-child(3n) {  width: 33.3%;}
+ul.image-group li:nth-child(4n) {  width:44.4%}
+ul.image-group li:nth-child(5n) {  width:44.4%;padding-left: 12.1%;}
+ul.image-group li:nth-child(6n) {  width:33.3%}
+
+
+@media (max-width: 768px) {
+.image{
+	padding-bottom: 12.5vh;
+		max-width: 100%; 
+	
+}
+ul.image-group li:nth-child(2n+1) { clear: none; }
+
+
+ul.image-group li,
+ul.image-group li:nth-child(2n),
+ul.image-group li:nth-child(3n),
+ul.image-group li:nth-child(4n),
+ul.image-group li:nth-child(5n),
+ul.image-group li:nth-child(6n) {
+	padding-left: 0;
+	width: 88.8%;
+	padding-bottom: 7%;
+}
+
+}
+-------------------------*/
+
+/*------------------------
+	Image Group Irregular
+-------------------------*/
+ul.image-group{
+padding-left: 9%;
+}
+ul.image-group li{
+	padding: 0 0 1% 1%;
+	display: inline-block;
+	float: left;
+	line-height: 0;
+	
+}
+
+ul.image-group li { width: 50%;}
+
+
+@media (max-width: 768px) {
+
+ul.image-group li:nth-child(2n+1) { clear: none; }
+
+
+ul.image-group li,
+ul.image-group li:nth-child(2n),
+ul.image-group li:nth-child(3n),
+ul.image-group li:nth-child(4n),
+ul.image-group li:nth-child(5n),
+ul.image-group li:nth-child(6n) {
+	padding-left: 0;
+	width: 88.8%;
+	padding-bottom: 7%;
+}
+
+}
+
+/*------------------------
+	Intro Image
+-------------------------*/
+
+.intro-image{
+	height: 90vh;
+	width: 100%;
+	margin-top: -10vh;
+	margin-bottom: 5vh;
+	background-position: center;
+	background-size: cover;
+	top: 0px;
+	left: 0px;
+	background-repeat: no-repeat
+}
+.intro-image.image-portrait{
+	background-position: left;
+	background-size: contain;
+}
+
+@media (max-width: 767px) {
+.intro-image{
+	height: 45vh;
+		margin-bottom: 2vh;
+	
+}
+}
+
+/*------------------------
+	Photoswipe Links
+-------------------------*/
+.img{
+position: relative;
+margin: 0;
+padding: 0;
+line-height: 0;
+}
+a.image-zoom,
+a.image-gallery{
+	width: 44px;
+	height: 44px;
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	background-image: url('../images/default-skin.png');
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 264px 88px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+a.image-zoom{
+right: 44px;	
+background-position: -88px 0;
+}
+
+
+a.image-gallery
+{
+right: 0px;	
+background-position: 0 0;
+}
+
+.img.cycle-slide a.image-zoom{
+right: calc(44px + .8vw);	
+background-position: -88px 0;
+}
+
+
+.img.cycle-slide a.image-gallery
+{
+right: .8vw;	
+background-position: 0 0;
+}
+.img a.image-zoom,
+.img a.image-gallery
+{
+opacity: 0;
+-webkit-transition: opacity 0.2s;
+        transition: opacity 0.2s;
+}
+.img:hover a.image-zoom,
+.img:hover a.image-gallery
+{
+opacity: .5;
+}
+
+.img:hover a.image-zoom:focus,
+.img:hover a.image-zoom:hover,
+.img:hover a.image-gallery:focus,
+.img:hover a.image-gallery:hover
+ {
+  opacity: 1; }
+
+
+
+@media (max-width: 768px) {
+.img a.image-zoom,
+.img a.image-gallery
+{
+opacity: .5;}
+
+
+}
+
+
+/*------------------------
+	Image cycle
+-------------------------*/
+.img.cycle-slide{
+	padding: inherit;
+}
+
+
+/*------------------------
+	Image flickity
+-------------------------*/
+	
+	
+
+
+/*------------------------
+	Image flickity
+------------------------*/
+
+.images-flickity .flickity-slider img{
+	max-width:65%;  
+margin-left: 0%;
+padding-right: 10%;
+position: relative;
+top: 50%;
+transform: translateY(-50%);
+}
+
+.flickity-enabled .carousel-cell { margin-bottom: 0; }
+.flickity-enabled:focus .drag {
+  opacity: 0;
+}
+.drag{
+width: 60px;
+height: 60px;
+background: black;
+color: white;
+-moz-border-radius: 30px;
+-webkit-border-radius: 30px;
+border-radius: 30px;
+text-align: center;
+line-height: 20px;
+padding-top: 19px;
+overflow: visible;
+position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -30px 0 0 -30px;
+  z-index: 1;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  -ms-transition: all 0.5s ease-in;
+  transition: .5s ease-out;
+  pointer-events: none;
+  
+}
+
+
+@media (max-width: 768px) {
+
+.images-flickity.flickity-enabled,
+.images-flickity.flickity-viewport 
+ {
+  height: auto;
+}
+
+.images-flickity .flickity-slider img{
+	max-width:90%;  
+margin-left: 0%;
+padding-right: 5%;
+}
+
+.drag{
+	display: none;
+}
+}

@@ -1,0 +1,66 @@
+{% extends "_layout" %}
+
+
+{% block content %}
+{% for entry in craft.entries.section('insights').limit(1) %}
+<section id="insights-intro">
+{% set image = entry.headerImage.first() %}
+{% set transformedImage = craft.imager.transformImage(image, {
+		width: 1800,
+	}) %}
+	 <div class="bg-light-green vh-100 bg-cover fade-in" style="{% if image and entry.headerType == 'background' %}background-image: url('{{ transformedImage.url }}');{% endif %}">
+        <div class="row pad-top-15 m-pad-top-15 m-pad-bottom-5">
+        <div class="five columns offset-by-one">
+        <h1 class="pad-top-1 green"><span class="text-serif text-large">Insights </span> <span class="sc inline">From the FMco Team</span></h1>
+        </div>
+        <div class="six columns">
+        {% include '_includes/newsletter-signup' %}
+        </div>
+        </div>
+         <div class="row pad-top-10 m-pad-bottom-5">
+        	<div class="four columns offset-by-two tablet-two">
+        	{% if image and entry.headerType == 'foreground' %}<img src="{{ image.url }}" alt="{{ entry.title }}" class="insights-image"/>	{% endif %}
+        	</div>
+        	<div class="five columns end tablet-two">
+        	<a href="{{ entry.url }}"><h1 class="text-serif text-xxlarge m-text-large fade-in-up pad-top-10 m-pad-top-5">{{ entry.title }}</h1></a>
+        	<br />{{ entry.intro }}
+        	<br />
+        	<hr class="bg-green"/>
+        	</div>
+        </div>
+       
+    </div>
+</section>
+
+ {% endfor %}
+
+
+    <section id="entries">
+    <div class="row pad-top-neg-15">
+		<div class="ten columns centered bg-white">
+			<div class="row text-centered pad-top-7 m-pad-top-7 pad-bottom-15 m-pad-bottom-7 fadein fast">
+        	<h2 class="sc">More Insights</h2>
+        	</div>
+        </div>
+    </div>
+    
+    
+            {% for entry in craft.entries.section('insights') %}
+                <div class="row pad-top-5 m-pad-bottom-2">
+                	<div class="four columns centered tablet-two">
+                	                    <a href="{{ entry.url }}"><h3 class="text-large text-serif green text-centered"><strong>{{ entry.title }}</strong></h3></a>
+                	</div>
+                </div>
+                <div class="row pad-top-5 pad-bottom-10 m-pad-bottom-10">
+					<div class="five columns centered tablet-three">
+                    {{ entry.intro }}
+                    <br />
+                    <hr class="bg-green"/>
+                   </div>
+                </div>
+            {% endfor %}
+    </section>
+
+	{% include '_includes/request-callback' %}
+
+{% endblock %}

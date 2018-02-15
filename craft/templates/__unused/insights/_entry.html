@@ -1,0 +1,62 @@
+{% extends "_layout" %}
+
+{% block content %}
+<section id="insights">
+{% set image = entry.headerImage.first() %}
+{% set transformedImage = craft.imager.transformImage(image, {
+		width: 1800,
+	}) %}
+	 <div class="bg-light-green vh-110 bg-cover fade-in" style="{% if image and entry.headerType == 'background' %}background-image: url('{{ transformedImage.url }}');{% endif %}">
+        <div class="row pad-top-15 m-pad-top-15 m-pad-bottom-5">
+	        <div class="five columns offset-by-one">
+		        <h1 class="pad-top-1 green"><span class="text-serif text-large"><a href="{{siteUrl}}insights" class="no_ul">Insights </a></span> <span class="sc inline	">From the FMco Team</span></h1>
+	        </div>
+	        <div class="six columns">
+	        {% include '_includes/newsletter-signup' %}
+	        </div>
+        </div>
+    </div>
+</section>
+<div class="row pad-top-neg-{% if image and entry.headerType == 'foreground' %}15{% else %}30{% endif %}n m-pad-top-5">
+	<div class="ten columns centered bg-white">
+		<div class="row fade-in-slow">
+			{% if image and entry.headerType == 'foreground' %}
+			<div class="five columns centered pad-top-neg-65 tablet-three">
+				<h1 class="text-serif text-xlarge text-centered fade-in-up pad-bottom-5 m-pad-bottom-2">{{ entry.title }}</h1>
+				<img src="{{ image.url }}" alt="{{ entry.title }}" class="insights-image"/>	
+			</div>
+			{% else %}
+			<div class="seven columns centered pad-top-neg-40">
+				<h1 class="text-serif text-xlarge text-centered fade-in-up pad-bottom-5">{{ entry.title }}</h1>
+			</div>
+			{% endif %}
+			
+		</div>
+		<div class="row pad-top-7 m-pad-top-5">
+			<div class="eight columns centered text-serif text-medium tablet-three">
+				{{ entry.intro }}
+			</div>
+    	</div>
+    	<div class="row">
+	    	<div class="six columns centered tablet-three">
+		    	{{ entry.body }}
+	    	</div>
+    	</div>
+		<div class="row pad-top-10 m-pad-top-10 ">
+	   	<div class="six columns centered end">
+			{# Set parameters for prev/next elements list #}
+			{% set params = craft.entries.section('insights').order('title asc') %}
+			
+			{# Get the prev/next elements #}
+			{% set prevEntry = entry.getPrev(params) %}
+			{% set nextEntry = entry.getNext(params) %}
+			
+			{# And make sure to only output the links if the element exists #}
+			{% if nextEntry %}<a href="{{ nextEntry.url }}"><span class="sc inline">Next: </span><span class="text-serif text-medium green">{{nextEntry.title}}</a></span>{% endif %}
+	   	</div>
+		</div>
+    </div>
+</div>
+
+	{% include '_includes/request-callback' %}
+{% endblock %}

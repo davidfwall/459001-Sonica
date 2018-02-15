@@ -1,0 +1,468 @@
+/* @override https://3feretail.workgroupstaging.com/assets/css/form.css
+	http://localhost:8888/186007-FMco/assets/css/form.css
+	http://localhost:8888/315028-DW-Web/assets/css/form.css */
+
+/* @override https://3feretail.workgroupstaging.com/assets/css/form.css */
+
+/* @override https://3feretail.workgroupstaging.com/assets/css/form.css */
+
+/* @override https://3feretail.workgroupstaging.com/assets/css/form.css */
+
+/* @override https://3feretail.workgroupstaging.com/assets/css/form.css */
+
+/* @override http://hrarch.webfactional.com/assets/css/form.css
+	http://localhost:8888/109042-3fe-retail/assets/css/form.css */
+
+/* -------------------------------------------------- 
+    Form Styles
+---------------------------------------------------*/
+.form-wrapper{
+	padding: 0;
+	margin: 0;
+	margin: 0;
+	padding: 0;
+	line-height: 0px;
+	border: none!important;
+	-moz-box-shadow: 0 10px 25px rgba(0, 193, 95, 0.3);
+	box-shadow: 0 10px 25px rgba(0, 193, 95, 0.3);
+	-webkit-transition:all .3s ease-in-out;  
+	-moz-transition:all .3s ease-in-out;  
+	-o-transition:all .3s ease-in-out;  
+	transition:all .3s ease-in-out;
+	
+}
+
+form, .form{
+	margin: 0;
+	padding: 0;
+	line-height: 0px;
+	border: none!important;
+}
+.form-insights{
+	padding-top: 5px;
+}
+.form-wrapper:hover{
+	padding: 0;
+	margin: 0;
+	-moz-box-shadow: 0 5px 10px rgba(0, 193, 95, 0.6);
+	box-shadow: 0 5px 10px rgba(0, 193, 95, 0.6);
+}
+form input[type="text"], form input[type="email"], form input[type="search"], form input[type="password"], .form_input {
+  width: 100%;
+  padding: 14px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  background: transparent;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  color: black;
+  text-align: left;
+  outline: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  font-size: 15px;
+	line-height: 32px;
+	font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+form.form-insights input{
+	line-height: 20px;
+}
+.form_input.red{
+color:#ff412b
+}
+form textarea, .form_textarea {
+width: 100%;
+  margin: 0 0 39px;
+padding: 0 10px 8px;
+  appearance: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  border-radius: none;
+  background: transparent;
+  border: none;
+  color: black;
+  outline: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+	border-bottom: 1px solid black;
+	font-size: 14px;
+}
+form textarea:focus {
+  background: transparent;
+}
+
+button.disabled,
+.button.disabled,
+a.button.disabled,
+input.button.disabled{
+	cursor: not-allowed;
+	background: silver;
+	color: gray;
+}
+
+form button, a.button, .button{
+	padding: 10px 20px;
+	border-bottom: none;
+  outline: none;
+  cursor: pointer;
+-webkit-transition:all .2s ease-in-out;  
+-moz-transition:all .2s ease-in-out;  
+-o-transition:all .2s ease-in-out;  
+transition:all .2s ease-in-out;
+  float: left;
+  max-width: 100%;
+  text-align: center;
+  line-height: 28px;
+	font-weight: bold;
+-moz-border-radius: 50px;  /* for mozilla */
+-webkit-border-radius: 50px; /* for safari */
+border-radius: 50px;  /* IE, Chrome, Opera */
+	font-size: 18px;
+}
+form button.arrow:hover, a.button.arrow:hover, .button.arrow:hover{
+padding-left: 28px;
+}
+
+form button.arrow::after, a.button.arrow::after, .button.arrow::after{
+content: "→";
+padding-left: 8px;
+-webkit-transition:all .2s ease-in-out;  
+-moz-transition:all .2s ease-in-out;  
+-o-transition:all .2s ease-in-out;  
+transition:all .2s ease-in-out;
+}
+form button.arrow:hover::after, a.button.arrow:hover::after, .button.arrow:hover::after{
+content: "→";
+padding-left: 12px;
+}
+form button.wide, a.button.wide, .button.wide{
+width: 100%;
+
+}
+
+form.form-insights .button{
+  border-bottom: none;
+ padding: 8px 10px;
+
+}
+
+
+form button{
+	border: none!important;
+	line-height: 24px;
+}
+
+input.button{
+	border: none!important;
+}
+
+.button:hover{
+	color: black;
+		border: none!important;
+	
+}
+
+form ::-webkit-input-placeholder {
+    color: #ababab;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+form :-moz-placeholder { /* Firefox 18- */
+    color: #ababab;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+form ::-moz-placeholder {  /* Firefox 19+ */
+    color: #ababab;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+form :-ms-input-placeholder {  
+    color: #ababab;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+input ::-webkit-input-placeholder {
+    color: #ababab;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+input :-moz-placeholder { /* Firefox 18- */
+    color: #ababab;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+input ::-moz-placeholder {  /* Firefox 19+ */
+    color: #ababab;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+input :-ms-input-placeholder {  
+    color: #ababab;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+
+form.form-insights ::-webkit-input-placeholder {
+    color: #00c15f;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+form.form-insights :-moz-placeholder { /* Firefox 18- */
+    color: #00c15f;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+form.form-insights ::-moz-placeholder {  /* Firefox 19+ */
+    color: #00c15f;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+form.form-insights :-ms-input-placeholder {  
+    color: #00c15f;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+.form-insights input ::-webkit-input-placeholder {
+    color: #00c15f;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.form-insights input :-moz-placeholder { /* Firefox 18- */
+    color: #00c15f;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.form-insights input ::-moz-placeholder {  /* Firefox 19+ */
+    color: #00c15f;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.form-insights input :-ms-input-placeholder {  
+    color: #00c15f;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+
+
+
+
+form .form_standard ::-webkit-input.form_standard-placeholder {
+    color: #ababab;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+form .form_standard :-moz-placeholder { /* Firefox 18- */
+    color: #ababab;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+form .form_standard ::-moz-placeholder {  /* Firefox 19+ */
+    color: #ababab;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+form .form_standard :-ms-input.form_standard-placeholder {  
+    color: #ababab;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+input.form_standard ::-webkit-input.form_standard-placeholder {
+    color: #ababab;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+input.form_standard :-moz-placeholder { /* Firefox 18- */
+    color: #ababab;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+input.form_standard ::-moz-placeholder {  /* Firefox 19+ */
+    color: #ababab;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+input.form_standard :-ms-input.form_standard-placeholder {  
+    color: #ababab;
+   font-family: 'Montserrat','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+textarea.form_standard::-webkit-textarea.form_standard-placeholder {
+    color: #ababab
+}
+
+textarea.form_standard:-moz-placeholder {
+    color: #ababab
+}
+
+textarea.form_standard::-moz-placeholder {
+    color: #ababab
+}
+
+textarea.form_standard:-ms-textarea.form_standard-placeholder {
+    color: #ababab
+}
+
+
+
+form .note {
+ display: inline;
+ margin-left: 20px;
+}
+
+
+
+
+.screen-reader-response{display: none}
+span[role=alert],.wpcf7-response-output{
+	color: #fff;
+	font: 16px/24px ;
+}
+.wpcf7-response-output{
+
+	color: #fff;
+}
+
+/* -------------------------------------------------- 
+    Input
+    Custom styling with default having been strippped out elsewhere. 
+---------------------------------------------------*/
+
+
+.form_input{
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	width: 100%;
+	position: relative;
+	margin-top: -1px;
+	margin-bottom: 0;
+	min-height: 4vh;
+	padding: 0;
+}
+.form_input.red input{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	appearance: none;
+	box-shadow: none;
+	border-radius: none;
+	background: transparent;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0!important;
+	outline: none;
+	border-radius: 0;
+	-webkit-appearance: none;
+	text-align: right;
+	font-size: 14px;
+	padding: 10px 33px 10px 10px;
+	color: inherit;
+}
+.form_input label{
+	position: absolute;
+	top: 6.5px;
+	left: 0;
+	pointer-events: none;
+	
+}
+
+@media (max-width: 768px) {
+
+form button.wide, a.button.wide, .button.wide{
+width: auto;
+
+}
+form button.m-wide, a.button.m-wide, .button.m-wide{
+width: 100%;
+
+}
+
+form input[type="text"], form input[type="email"], form input[type="search"], .form_input, .form_input.red, .form_input.red input, form textarea, .form_textarea {
+	font-size: 16px;
+}
+
+}
+
+
+
+/* -------------------------------------------------- 
+    Standard forms
+    for checkout etc
+    ---------------------------------------------------*/
+
+form textarea[type="text"].form_standard,
+form input[type="text"].form_standard,
+form input[type="email"].form_standard,
+form input[type="search"].form_standard,
+form input[type="password"].form_standard,
+input[type="password"].form_standard,
+input.form_standard {
+    background: white;
+    border-bottom: 1px solid #efefef !important;
+    border-radius: 2px !important;
+    padding: 4px 1px 4px 9px !important;
+    margin-bottom: 10px !important
+}
+
+form input[type="text"].form_standard.error, 
+form input[type="email"].form_standard.error, 
+form input[type="search"].form_standard.error, 
+form input[type="password"].form_standard.error, 
+input[type="password"].form_standard.error, 
+input.form_standard.error{
+background-color: #fcebe7
+} 
+
+/* -------------------------------------------------- 
+    Standard forms
+    for checkout etc
+    select menus
+    ---------------------------------------------------*/
+   .form-select{
+   	width: 100%;
+   	float: left;
+   	padding: 1vh 0;
+   	display: block;
+   	min-height: 40px;
+ } 
+  .form-select label{
+  	width: 40%;
+  	float: left;
+  }
+
+.form-select select{
+	width: 60%;
+	float: left;
+}
+
+
+   .form-select-wide{
+   	width: 100%;
+   	float: left;
+   	padding: 1vh 0;
+   	display: block;
+   	min-height: 40px;
+ } 
+  .form-select-wide label{
+  	width: 100%;
+  	float: left;
+  	   	padding: 0 0 .7vh;
+  	
+  }
+
+.form-select-wide select{
+	width: 100%;
+	float: left;
+	   	padding: 1vh 0;
+	
+}

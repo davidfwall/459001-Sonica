@@ -1,0 +1,30 @@
+<form id="mc-form" class="form-insights show-on-desktops">
+{#<div class="three columns bg-white">
+	<input type="text" placeholder="First Name" value="" name="FNAME" class="text-input" id="mce-FNAME">
+</div>
+<div class="three columns bg-white">
+	<input type="text" placeholder="Surname" value="" name="LNAME" class="text-input" id="mce-LNAME">
+</div>
+#}
+<div class="eight columns bg-lighter-green">
+<input id="mce-EMAIL" type="email" name="EMAIL" placeholder="Enter your email to receive monthly insights" class="text-input">
+</div>
+<div class="four columns bg-lighter-green">
+<button type="submit" class="button bg-green white sc text-center">Subscribe</button>
+</div>
+</form>
+{#<form class="form-newsletter-subscribe" action="" method="POST">
+    <input type="hidden" name="action" value="mailchimpSubscribe/list/subscribe">
+    <input type="hidden" name="redirect" value="newsletter/receipt">
+
+    {% if mailchimpSubscribe is defined %}
+    {% if (not mailchimpSubscribe.success) and (mailchimpSubscribe.errorCode!='1000') %}
+        <p>An error occured. Please try again.</p>
+    {% endif %}
+    {% endif %}
+
+    <input type="text" name="email" placeholder="Enter your email to receive monthly insights"  value="{% if (mailchimpSubscribe is defined) and (not mailchimpSubscribe.success) %}{{ mailchimpSubscribe.values.email }}{% endif %}"/>
+    
+    <input class="btn btn-green" type="submit" value="Subscribe" />
+</form>
+#}

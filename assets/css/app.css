@@ -1,10 +1,12 @@
 /* @override http://localhost:8888/109042-3feretail/assets/css/app.css
 	http://localhost:8888/109042-3feretail-1/assets/css/app.css
 	http://localhost:8888/186007-FMco/assets/css/app.css
-	http://localhost:8888/315028-DW-Web/assets/css/app.css */
+	http://localhost:8888/315028-DW-Web/assets/css/app.css
+	http://localhost:8888/459001-Sonica/assets/css/app.css */
 
 html, body{
 min-height: 100vh;
+background-color: #f15a22;
 }
 
 hr{
@@ -21,7 +23,7 @@ hr{
 	margin-left: 7%;
 	}
 	
-	
+
 	/*------------------------
 	Carousel
 	-------------------------*/	
@@ -471,440 +473,17 @@ ul.red.dot > li::before {
 /*------------------------
 	Header
 -------------------------*/
-
-
-header {
-    height: 20vh;
-    position: fixed;
-    top: 0;
-    transition: top 0.3s ease-in-out;
-    width: 100%;
-    z-index: 101;
-}
-
-.nav-up {
-    top: -20vh;
-}
-
-.header-bg{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-    transition: all 0.5s ease-in-out;
-    opacity: 0;
-}
-
-
-.mopen .header-bg,
-.topinview .header-bg{
-    opacity: 0!important;
-}
-body.menu-black .nav-down .header-bg{
-background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,.9) 65%,rgba(255,255,255,0) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
-opacity: 1;
-}
-
-body.white .nav-down .header-bg{
-background: -moz-linear-gradient(top, rgba(52,52,52,1) 0%, rgba(52,52,52,0) 100%);
-background: -webkit-linear-gradient(top, rgba(52,52,52,1) 0%,rgba(52,52,52,0) 100%);
-background: linear-gradient(to bottom, rgba(52,52,52,1) 0%, rgba(52,52,52,.5) 75%, rgba(52,52,52,0) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#343434', endColorstr='#00343434',GradientType=0 );
-opacity: 1;
-}
-
-body:not(.topinview).white.menu-black .menu a,
-.mopen .menu a
-{
-	color: white!important;
-}
-body:not(.topinview).white.menu-black .menu_icon span,
-.mopen .menu_icon span
-{
-	background-color: white;
-}
-
-.topinview.page-home .nav-logo a,
-.mopen .nav-logo a
-{
-fill: #fff;
-}
-
-/*------------------------
-	Header
--------------------------*/
-.nav-logo{
-z-index: 10;
-height: 5vh;
-}
-
-
-.menu li a{
-	margin-right: 25px;
-	opacity: .5;
-	color: black;
-}
-.menu-white .menu li a{
-	color: white;
-}
-.menu-black .menu li a{
-	color: black;
-}
-.menu li a.active{
-	opacity: 1;
-}
-.m-menu-bg-dark{
-background: black;
-width: 100%;
-height: 100%;
-position: fixed;
-top: 0;
-left: 0;
-z-index: 10;
-opacity: .0;
-pointer-events: none;
--webkit-transition:all .2s ease-in;  
--moz-transition:all .2s ease-in;  
--o-transition:all .2s ease-in;  
-transition:all .2s ease-in;
-
-}
-.m-menu-bg{
-	-webkit-transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
-	   -moz-transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
-	     -o-transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
-	        transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
-	
-	-webkit-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000); 
-	   -moz-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000); 
-	     -o-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000); 
-	        transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
-	
-	
-}
-
-
-
-/* Hamburger Icon */
-
-
-.menu_icon{
-  width: 21%;
-  height: 21px;
-  position: relative;
-  margin: 8px 36% 10px;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  cursor: pointer;
-}
-
-.menu_icon span {
-  display: block;
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  background-color: #000;
-  opacity: 1;
-  left: 0;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
-}
-
-body.menu-white .menu_icon span{
-	  background-color: #fff;
-	
-}
-
-.nav-menu a:hover span{
-	background-color: #00c15f;
-}
-
-.menu_icon span:nth-child(1) {
-  top: 0px;
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
-  
-}
-
-.menu_icon span:nth-child(2),
-.menu_icon span:nth-child(3) {
-  top:6px;
-  -webkit-transition: .3s ease-in-out;
-  -moz-transition: .3s ease-in-out;
-  -o-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-}
-
-.menu_icon span:nth-child(4) {
-  top: 12px;
-  -webkit-transition: .4s ease-in-out;
-  -moz-transition: .4s ease-in-out;
-  -o-transition: .4s ease-in-out;
-  transition: .4s ease-in-out;
-}
-
-body.mopen .menu_icon span:nth-child(1) {
-  top: 7px;
-  width: 0%;
-  left: 50%;
- opacity: 0;
-}
-
-body.mopen .menu_icon span:nth-child(2) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-body.mopen .menu_icon span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-body.mopen .menu_icon span:nth-child(4) {
-  top: 7px;
-  width: 0%;
-  left: 50%;
-  opacity: 0;
-}
-
- .m-menu *{
- 	pointer-events: none;
- }
- .m-menu ul{
-	position: fixed;
-	z-index: 110; 
-	top: 0;
-	left: 8.8%;
-	padding-top: 33vh;
-
-}
- .m-menu ul{
-transform: skewX(-10deg);
--webkit-transition: .2s ease-in-out;
--moz-transition: .2s ease-in-out;
--o-transition: .2s ease-in-out;
-transition: .2s ease-in-out;
-}
-
-body.mopen .m-menu ul{
-	transform: skewX(0deg);
-}
-.m-menu li{
- 	font-size: 17px;
- 	margin-bottom: 5vh;
- 	border: none;
- 	font-weight: 500;
- 	-webkit-transition:all .2s ease-in;  
- 	-moz-transition:all .2s ease-in;  
- 	-o-transition:all .2s ease-in;  
- 	transition:all .2s ease-in;
- }
- .m-menu li a{
-  	border-bottom: 2px solid #fff;
-  	padding-bottom: 10px;
- -webkit-transition:all .2s ease-in;  
- -moz-transition:all .2s ease-in;  
- -o-transition:all .2s ease-in;  
- transition:all .2s ease-in;
- }
- .m-menu li a:hover{
- color: #00c15f;
- 
-border-bottom: 1px solid #00c15f;
-  }
- .m-menu li a.active{
- 	opacity: .3;
- }
- .m-menu li a.active:hover{
- 	opacity: 1;
- }
-.m-menu li{
--webkit-transition:all .1s ease-in;  
--moz-transition:all .1s ease-in;  
--o-transition:all .1s ease-in;  
-transition:all .1s ease-in;
-transform: translate(-20px, 0px);
-opacity: 0;
- }
- body.mopen .m-menu li{
-transform: translate(0px, 0px);
-opacity: 1;
- }
- .m-menu li a{
-  	border: none;
-  }
-  
-   .m-menu-info{
-  	position: fixed;
-  	z-index: 110; 
-  	top: 0;
-  	left: 25%;
-  	width: 18%;
-  	padding-top: 33vh;
-  	opacity: 1;
-  }
-    .m-menu-info p{
-  	  	font-weight: 500;
-  	
-  }
-  .m-menu-info{
-  -webkit-transition:all .15s ease-in;  
-  -moz-transition:all .15s ease-in;  
-  -o-transition:all .15s ease-in;  
-  transition:all .15s ease-in;
-  transform: translate(-10px, 0px);
-  opacity: 0;
-  pointer-events: none;
-   }
-   body.mopen .m-menu-info{
-  transform: translate(0px, 0px);
-  opacity: 1;
-  pointer-events: auto;
-   }
-   
-body.mopen .m-menu-bg{
-	max-width: 900px;
-	width: 50%;
-	left: 0%;
-	pointer-events: auto;
-	
-}
-body.mopen .m-menu-bg-dark{
-	opacity: .7;
-	pointer-events: auto;
-}
-body.mopen .m-menu *{
-	pointer-events: auto;
-}
-@media only screen and (max-width: 768px) {
-
-.nav-menu{
-	position: absolute;
-	width: 45px;
-	height: 45px;
-	z-index: 120;
-	left: calc(100% - 70px);
-	top: 25px;
-}
-.nav-menu a{
-	width: 100%;
-	height: 100%;
-	display: block;
-		padding-top: 25px;
-	background: #00c15f;
-}
-.nav-menu span{
-	background-color: #fff;
-}
-.nav-menu a:hover span{
-	background-color: #fff;
-}
-.menu_icon_holder{
-	position: absolute;
-	top: 50px;
-	right: 0!important;
-	z-index: 100;
-}
-.menu_icon{
-  width: 20px;
-  height: 21px;
-  position: relative;
-  margin: -10px 30% 10px;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  cursor: pointer;
-}
-
-.m-menu-bg{
-	position: fixed;
-	max-width: 85px;
-	width: 8%;
-	height: 100%;
-	background: white;
-	z-index: 90;
-	top: 0;
-	left: -9%;
-	border-right: 1px solid #efefef;
-}
-
-body.mopen .m-menu-bg{
-	max-width: 100%;
-	width: 100%;
-	left: 0%;
-	pointer-events: auto;
-	
-}
- .m-menu ul{
-	position: absolute;
-	z-index: 110; 
-	top: 0;
-	left: 9%;
-	padding-top: 33vh;
-
-}
- .m-menu-info{
-  	position: absolute;
-  	z-index: 110; 
-  	top: 0;
-  	left: 50%;
-  	width: 48%;
-  	padding-top: 33vh;
-  	opacity: 0;
-  	pointer-events: none;
-  }
-
- body.mopen .m-menu-info{
-opacity: 1;
-pointer-events: auto;
- }
-
-
-
-
-
 header{
-position: absolute;
-width: 100%;
-display: block;
-clear: both;
+	position: absolute;
+	width: 100vw;
+	z-index: 10;
 }
-.nav-logo{
-position: absolute;
-padding-top: 25px;
+.sonica-logo{
+width: 99%;
+margin: auto;
+	padding: 20px 0;
 }
-.nav-name{
-display: none;
-}
-svg.logo{
-	height: 40px;
-}
-}
+
 /*------------------------
 	inline
 -------------------------*/
@@ -947,6 +526,9 @@ svg.logo{
 /*------------------------
 	Colour
 -------------------------*/
+
+.orange{	color: #f15a22;	fill: #f15a22;}
+.bg-orange{	background-color: #f15a22;}
 
 .red{	color: #fe6363;	fill: #fe6363;}
 .bg-red{	background-color: #fe6363;}
@@ -1013,7 +595,7 @@ links
 a{
 	text-decoration: none;
 	color: inherit;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.333);
+	border-bottom: 1px solid #f15a22;
 	-webkit-transition:all .1s ease-in;  
 	-moz-transition:all .1s ease-in;  
 	-o-transition:all .1s ease-in;  
@@ -1024,7 +606,7 @@ a:hover,
 a:focus{
 	text-decoration: none;
 	color: inherit;
-	border-bottom: 2px solid rgba(0, 0, 0, .5);
+	border-bottom: 2px solid #f15a22;
 	
 }
 .no_ul, 

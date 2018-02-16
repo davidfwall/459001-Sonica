@@ -1,37 +1,41 @@
 /* @override https://3feretail.workgroupstaging.com/assets/css/type.css
 	http://localhost:8888/109042-3feretail/assets/css/type.css
 	http://localhost:8888/186007-FMco/assets/css/type.css
-	http://localhost:8888/315028-DW-Web/assets/css/type.css */
+	http://localhost:8888/315028-DW-Web/assets/css/type.css
+	http://localhost:8888/459001-Sonica/assets/css/type.css */
 
 /* @override 
 	http://localhost:8888/109042-3fe-retail/assets/css/type.css */
 
 
 body {
-	font-family: 'Nitti Grotesk','Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+	font-family: 'GT America', 'Helvetica Neue', Arial, sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
-	line-height: 34px;
-	font-size: 24px;
+	line-height: 31px;
+	font-size: 20px;
 	
 }
-.text-mono {
-	font-family: 'Nitti', Georgia, serif;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-	-moz-osx-font-smoothing: grayscale;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	line-height: 24px;
-	font-size: 13.5px;
+.text-extended {
+font-family: 'GT America Extended', 'Helvetica Neue', Arial, sans-serif;
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+-moz-osx-font-smoothing: grayscale;
+text-rendering: optimizeLegibility;
+-webkit-font-smoothing: antialiased;
+line-height: 31px;
+font-size: 20px;
 	
+}
+p.wide{
+	width: 100%;
 }
 p {
-width: 95%;
 hanging-punctuation: first;
+width: 95%;
 }
 .text-serif p, 
 p.text-serif{
@@ -40,10 +44,11 @@ p.text-serif{
 .text-centered p{
 width: 100%;
 }
-.page p{
-	margin-bottom: 1em;
+.page p:nth-child(n+2) {
+	    text-indent: 45px;
 	
 }
+.page h3 + p {text-indent: 0px!important}
 
 i,
 em {
@@ -64,11 +69,10 @@ strong {
 
 
 .sc {
-	font-size: 14px;
+	font: 11px/25px 'GT America Extended', 'Helvetica Neue', Arial, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 		font-weight: 500;
-	
 }
 
 
@@ -94,19 +98,10 @@ ul.text-small li,
 .text-small p,
 .text-small span {
 line-height: 24px;
-font-size: 16px;
+font-size: 15px;
 font-weight: 500;
 }
-p.text-regular,
-.text-regular,
-.text-regular ul,
-ul.text-regular li,
-.text-regular a,
-.text-regular p,
-.text-regular span {
-line-height: 29px;
-font-size: 17px;
-}
+
 p.text-medium,
 .text-medium,
 .text-medium ul,
@@ -114,8 +109,8 @@ ul.text-medium li,
 .text-medium a,
 .text-medium p,
 .text-medium span {
-	line-height: 62px;
-	font-size: 48px;
+	line-height: 46px;
+	font-size: 30px;
 	
 }
 p.text-large,
@@ -124,8 +119,11 @@ p.text-large,
 ul.text-large li,
 .text-large a,
 .text-large p,
-.text-large span,
-
+.text-large span{
+	line-height: 52px;
+	font-size: 40px;
+	font-weight: 300;	
+}
 
 p.text-xlarge,
 .text-xlarge,
@@ -134,11 +132,9 @@ ul.text-xlarge li,
 .text-xlarge a,
 .text-xlarge p,
 .text-xlarge span {
-line-height: 88px;
-font-size: 96px;
+line-height: 76px;
+font-size: 71px;
 font-weight: 300;
-margin-left: -.5%;
-	
 }
 
 

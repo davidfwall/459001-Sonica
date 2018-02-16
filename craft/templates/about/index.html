@@ -1,146 +1,93 @@
 {# About #}
 
 {% extends "_layout" %}
-{% set bodyClass = "white menu-black" %}
+{% set bodyClass = "" %}
 {% block content %}
 
-<div class="page bg-black white">
-<div class="top-image">
-	<div class="five columns"></div>
-	<div class="seven columns"><img src="{% for asset in entry.headerImage %}{{ asset.url }}{% endfor %}" alt="{{entry.title}}" /></div>
-</div>
+<div class="page bg-white">
 
-<div class="m-block">
-
-<div class="row pad-top-40 m-pad-top-30">
-	<h1 class="sc red">{{entry.title}}&mdash;</h1>
-</div>
-
-<div class="row pad-top-2 m-pad-top-5 vh-55 fade-in-up ">
-	<div class="three columns">
-			<h1 class="text-xlarge topsection">{{ entry.heading | raw }}</h1>
+<div class="row pad-top-50">
+	<div class="twelve columns text-large">
+		<p class="wide">At Sonica, we have the highest expectations of ourselves and our work, and complete confidence in our own ability to meet those expectations. That confidence is built on a wealth of expertise in every element of office fit-out from construction to site logistics to tech install. That confidence is built on clear communication, integrity and strong professional relationships. That confidence is built on the knowledge that by pulling in the same direction, our strengths are not just added together, but multiplied. That confidence is built on the experience of 150 completed fit-out projects – and counting.
+		</p>
+		<p>
+			We take pride and satisfaction in doing things the right way and enjoy facing every challenge. <span class="orange">That is what work means to Sonica.</span>
+		</p>
 	</div>
 </div>
 
-<div class="row vh-35 m-pad-top-50 m-pad-bottom-10">
-	<div class="five columns offset-by-six end">
-	<p>{{ entry.intro |widont|striptags|raw}}</p>
+<div class="row pad-top-35">
+	<div class="four columns">
+		<h2 class="orange text-large text-extended">
+			Our Approach
+		</h2>
 	</div>
-</div>
-
-<div class="row pad-top-5 m-pad-bottom-5">
-	<div class="eight columns centered">
-			<h3 class="text-medium text-centered">{{ entry.servicesIntroduction |widont|striptags|raw }}</h3>
+	<div class="four columns">
+		<h3><strong><span class="orange">1. </span>Discovery</strong></h3>
+		<p>A great office fit-out begins by getting to know you and your unique needs. We believe that by listening to you and asking the right questions we can form an understanding of what your individual project requires.</p>
 	</div>
-</div>
-
-<div class="row pad-top-10">
-	<div class="ten columns centered">
-		<ul class="block-grid three-up mobile text-small">
-		{% for entry in craft.entries.section('services') %}
-		<li>
-			<img src="{% for asset in entry.image %}{{ asset.url }}{% endfor %}" alt="{{ entry.title }}" width="50px" />
-			<div class="row">
-				<div class="ten columns offset-by-one">
-					<h4 class="blue pad-top-2 m-text-regular">{{ entry.title }}</h4>
-					<p class="white m-text-regular">{{ entry.description |widont|striptags|raw }}</p>
-					<p class="white pad-top-2 text-mono m-text-regular">{{ entry.note |striptags|raw }}</p>
-				</div>
-			</div>
-		</li>
-		{% endfor %}
-		</ul>
+	<div class="four columns">
+		<h3><strong><span class="orange">2. </span>Planning</strong></h3>
+		<p>When we receive your brief, our first order of business is to assemble an in-house team for your project. We draw on our extensive experience to put together the right staff to handle the individual complexities of your fit-out, before formulating an execution plan and setting delivery targets in stone.
+		</p>
 	</div>
-</div>
-
-	<div class="dw-shapes dw-shapes-box-blue-dot-right vh-300"></div>
-
-
-<div class="row pad-top-25 m-pad-top-15 m-pad-bottom-5">
-	<div class="eight columns centered">
-			<h3 class="text-medium text-centered">Departments</h3>
 	</div>
-</div>
-
-
-<div class="row pad-top-10">
-	<div class="nine columns centered">
-		<ul class="block-grid two-up mobile">
-		{% for entry in craft.entries.section('departments') %}
-		<li class="">
-			<h4 class="red">{{ entry.title }}</h4>
-			<span class="white">{{ entry.description |striptags|raw }}</span>
-			<br /><br />
-		</li>
-		{% endfor %}
-		</ul>
-	</div>
-</div>
-
-
-<div class="row pad-top-25 m-pad-bottom-5">
-	<div class="ten columns centered">
-			<h3 class="text-medium text-centered">Locations</h3>
-	</div>
-</div>
-
-</div><!--End mblock-->
-	
-	<div class="dw-shapes dw-shapes-circle-red-dot-left vh-200"></div>
-	
-	<div class="m-pad-bottom-5">
-		<div class="carousel">
-		{% for asset in entry.locationsImages %}
-			<div class="locations-carousel-cell vh-100">
-				<img src="{{ asset.url }}" alt="location image" />
-			</div>
-		{% endfor %}
-		</div>
-	</div>
- 	 
- <div class="m-block">
- 
-
 <div class="row pad-top-5">
-	<div class="ten columns centered">
-		<ul class="block-grid three-up mobile text-small">
-		{% for entry in craft.entries.section('locations') %}
-		<li>
-			<h4 class="blue m-text-regular">{{ entry.title }}</h4>
-			<p class="white m-text-regular">{{ entry.description |striptags|raw }}</p>
-		</li>
-		{% endfor %}
-		</ul>
+	<div class="four columns">
+		<h3><strong><span class="orange">3. </span>Costing</strong></h3>
+		<p>We have an extensive roster of sub-contract partners from whom we assemble the right team for the parameters of your job. Sonica’s Surveying Team then analyses the costings provided by our partners to produce a detailed budget recommendation, which we will present to you to review and sign-off.
+		</p>
+		<p>The whole process is transparent and allows you to retain complete control of expenditure.
+		</p>
+	</div>
+	<div class="four columns">
+		<h3><strong><span class="orange">4. </span>Construction</strong></h3>
+		<p>Before any trade works begin on your site, we organise a ramp-up period. This helps us ensure that all our partners begin your project with clarity of purpose, and helps us maintain our impeccable safety record.
+		</p>
+		<p>Once works begin, our Site Operations Team will provide you with comprehensive weekly reports detailing construction progress and cumulative hours that completed accident-free on your site. Completing your project on-time, on-budget, and accident-free is our only objective.
+		</p>
+	</div>
+	<div class="four columns">
+		<h3><strong><span class="orange">5. </span>Hand-Over</strong></h3>
+		<p>At Sonica, when we handover your project it means it is 100% finished: no snag lists, no late arrivals. We provide pre-handover training for new installation features for you and your staff, and we’re always happy to help you bed into your new work space and deal with any queries you might have.	We believe that diligent organisation is the key to meeting schedules and mitigating against anything getting left behind. 
+		</p><p>
+		We take pride in making your project our best one yet.
+			</p>
 	</div>
 </div>
 
-<div class="row pad-top-25 m-pad-top-15 m-pad-bottom-5">
-	<div class="eight columns centered">
-			<h3 class="text-medium text-centered">Leadership Team</h3>
+
+<div class="row pad-top-35">
+	<div class="four columns">
+		<h2 class="orange text-large text-extended">
+			Our Team
+		</h2>
+	</div>
+	<div class="six columns offset-by-two end">
+		<p>From the boardroom to the job site, every member of the Sonica team is driven by the same motivations: to provide a service that goes beyond our clients expectations, and to always strive to improve what we offer.
+		</p>	
+		<p>We believe that by creating an environment founded on encouragement and teamwork, we allow our people to do their best work. That’s something that satisfies both our clients and ourselves.
+		
+		</p>
 	</div>
 </div>
-
-<div class="row pad-top-5 pad-bottom-15">
-	<div class="twelve columns">
-		<ul class="block-grid two-up mobile">
-			{% for entry in craft.entries.section('leadershipTeam') %}
-			<li>
-				<img src="{% for asset in entry.image %}{{ asset.url }}{% endfor %}" alt="" />
-				<div class="row pad-bottom-5 m-pad-bottom-5"> 
-					<div class="eight columns offset-by-two">
-						<h4 class="white pad-top-2 text-small m-text-regular">{{ entry.title }}</h4>
-						<p class="white text-mono m-text-regular">{{ entry.note }}</p>
-					</div>
-				</div>
+<div class="row pad-top-15">
+<div class="twelve columns">
+	<ul class="block-grid six-up mobile">
+		{% for entry in craft.entries.section('team') %}
+			<li class="text-small">
+				<a href="" class="no_ul"><img class="" src="{% for asset in entry.portraitImage %}{{ asset.url }}{% endfor %}" alt="{{entry.title}}" /></a>
+				<a href="">{{ entry.title }}</a>
+				<br />
+				{{ entry.role }}
+				<br /><br />
 			</li>
-			{% endfor %}
-		</ul>
-	</div>
+		{% endfor %}
+	</ul>
 </div>
 
 
 
 
-</div><!--End mblock-->
 </div><!--End Page-->
 {% endblock %}

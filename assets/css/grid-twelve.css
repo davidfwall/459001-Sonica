@@ -1,3 +1,5 @@
+/* @override http://localhost:8888/459001-Sonica/assets/css/grid-twelve.css */
+
 /* @override http://localhost:8888/109042-3feretail/assets/css/grid-twelve.css
 	http://localhost:8888/315028-DW-Web/assets/css/grid-twelve.css */
 
@@ -20,7 +22,7 @@ html {
   .row {
   	z-index: 1;
   }
-.row { width: 1160px; max-width: 100%;  margin: 0 auto;height: auto;position: relative;
+.row { width: 100%;  margin: 0 auto;height: auto;position: relative;
 }
 .row .row { width: auto; max-width: none; min-width: 0; margin: 0 0%; }
 .row.collapse .column, .row.collapse .columns { padding: 0; }
@@ -28,7 +30,7 @@ html {
 .row .row.collapse { margin: 0; }
 
 .column, .columns { float: left; min-height: 1px;
-	padding: 0 .8vw 0 0;
+	padding: 0 18px;
 	position: relative;
 		
  }
@@ -222,8 +224,8 @@ that IE7/8 do not support :nth-child.
 .block-grid > li { display: block; height: auto; float: left; }
 .block-grid.one-up { margin: 0; }
 .block-grid.one-up > li { width: 100%; padding: 0 0 15px; }
-.block-grid.two-up { margin: 0 -15px; }
-.block-grid.two-up > li { width: 50%; padding: 0 15px 15px; }
+.block-grid.two-up { margin: 0 px; }
+.block-grid.two-up > li { width: 50%; padding: 15px; }
 .block-grid.two-up > li:nth-child(2n+1) { clear: both; }
 .block-grid.three-up { margin: 0 -12px; }
 .block-grid.three-up > li { width: 33.33333%; padding: 0 12px 12px;}
@@ -237,8 +239,8 @@ that IE7/8 do not support :nth-child.
 .block-grid.five-up { margin: 0 -8px; }
 .block-grid.five-up > li { width: 20%; padding: 0 8px 8px; }
 .block-grid.five-up > li:nth-child(5n+1) { clear: both; }
-.block-grid.six-up { margin: 0 -8px; }
-.block-grid.six-up > li { width: 16.66667%; padding: 0 8px 8px; }
+.block-grid.six-up { margin: 0 -18px; }
+.block-grid.six-up > li { width: 16.66667%; padding: 0 18px 18px; }
 .block-grid.six-up > li:nth-child(6n+1) { clear: both; }
 .block-grid.seven-up { margin: 0 -8px; }
 .block-grid.seven-up > li { width: 14.28571%; padding: 0 8px 8px; }

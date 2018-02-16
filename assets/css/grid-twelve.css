@@ -225,7 +225,7 @@ that IE7/8 do not support :nth-child.
 .block-grid.one-up { margin: 0; }
 .block-grid.one-up > li { width: 100%; padding: 0 0 15px; }
 .block-grid.two-up { margin: 0 px; }
-.block-grid.two-up > li { width: 50%; padding: 15px; }
+.block-grid.two-up > li { width: 50%; padding: 0px; }
 .block-grid.two-up > li:nth-child(2n+1) { clear: both; }
 .block-grid.three-up { margin: 0 -12px; }
 .block-grid.three-up > li { width: 33.33333%; padding: 0 12px 12px;}

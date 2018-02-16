@@ -1,3 +1,5 @@
+/* @override http://localhost:8888/459001-Sonica/assets/css/app.css */
+
 /* @override http://localhost:8888/109042-3feretail/assets/css/app.css
 	http://localhost:8888/109042-3feretail-1/assets/css/app.css
 	http://localhost:8888/186007-FMco/assets/css/app.css
@@ -39,6 +41,21 @@ hr{
 	background: linear-gradient(to bottom, rgba(63,33,2,0.65) 0%,rgba(0,0,0,0.06) 80%,rgba(0,0,0,0) 88%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a63f2102', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 	
+}
+
+/*------------------------
+	home
+-------------------------*/
+
+.bg-fade{
+	background: -moz-linear-gradient(top, rgba(63,33,2,0.65) 0%, rgba(0,0,0,0.06) 80%, rgba(0,0,0,0) 88%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(63,33,2,0.65) 0%,rgba(0,0,0,0.06) 80%,rgba(0,0,0,0) 88%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(63,33,2,0.65) 0%,rgba(0,0,0,0.06) 80%,rgba(0,0,0,0) 88%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a63f2102', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+}
+.h-100{
+	height: 65vh!important;
 }
 /*------------------------
 	Lists

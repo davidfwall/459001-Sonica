@@ -23,334 +23,23 @@ hr{
 	margin-left: 7%;
 	}
 	
-
-	/*------------------------
-	Carousel
-	-------------------------*/	
-	
-	.carousel,	
-	.carousel-cell{
-		width: 100%;
-		height: 100%;
-	}
-	
-	.carousel-cell.image-single{
-		text-align: center;
-		position: relative;
-	}
-	.carousel-cell.image-single img{
-		width: 66%;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-	
-	.carousel-cell.image-multi{
-		text-align: center;
-		position: relative;
-	}
-	
-	.carousel-cell.image-multi.is-selected{
-		text-align: center;
-		position: relative;
-	}
-	
-	
-	.carousel-cell.image-multi img{
-		width: 50%;
-		position: absolute;
-		top: 40%;
-		left: 50%;
-		transition: all 0.5s ease-in-out;
-		
-	}
-	.carousel-cell.image-multi img:first-of-type{
-		top: 10%;
-		left: 30%;
-	}
-	
-	.carousel-cell.image-multi.is-selected img{
-		top: 40%;
-		left: 40%;
-	}
-	.carousel-cell.image-multi.is-selected img:first-of-type{
-		top: 10%;
-		left: 10%;
-	}
-	
-		
-		/* ---- custom previous/next buttons ---- */
-		
-		.flickity-prev-next-button {
-		  position: absolute;
-		  top: 50%;
-		  width: 24px;
-		  height: 24px;
-		  border: none;
-		  border-radius: 50%;
-		  background: none!important;
-		  cursor: pointer;
-		  /* vertically center */
-		  -webkit-transform: translateY(-50%);
-		          transform: translateY(-50%);
-		}
-	
-		.flickity-prev-next-button:hover { background: white; }
-		
-		.flickity-prev-next-button:focus {
-		  outline: none;
-		}
-		
-		.flickity-prev-next-button:active {
-		  opacity: 0.6;
-		}
-		
-		.flickity-prev-next-button.previous { left: 3%; margin-top: -15px;
-		}
-		.flickity-prev-next-button.next { left: 3%; margin-top: 15px}
-		/* right to left */
-		.flickity-rtl .flickity-prev-next-button.previous {
-		  left: auto;
-		  right: 10px;
-		}
-		.flickity-rtl .flickity-prev-next-button.next {
-		  right: auto;
-		  left: 10px;
-		  
-		}
-		
-		.flickity-prev-next-button:disabled {
-		  opacity: 0;
-		  cursor: auto;
-		}
-		
-		.flickity-prev-next-button svg {
-		  position: absolute;
-		  left: 20%;
-		  top: 20%;
-		  width: 60%;
-		  height: 60%;
-		}
-		
-		.flickity-prev-next-button .arrow {
-		  fill: #b4b4b4;
-		}
-		
-	
-	.locations-carousel-cell{
-		width: 40%;
-		height: 100%;
-	}
-	
-	.locations-carousel-cell img{
-		width: 80%;
-		right: 0;
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-	}
-	
-	@media (max-width: 768px) {
-	
-	.carousel,	
-	.carousel-cell{
-		width: 100%;
-		height: 400px;
-	}
-	.carousel-cell.image-single img{
-		width: 90%;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-	
-	.carousel-cell.image-multi img{
-		width: 70%;
-		position: absolute;
-		top: 40%;
-		left: 20%;
-		transition: all 0.5s ease-in-out;
-		
-	}
-	.carousel-cell.image-multi img:first-of-type{
-		top: 10%;
-		left: 5%;
-	}
-	
-	.carousel-cell.image-multi.is-selected img{
-		top: 40%;
-		left: 30%;
-	}
-	.carousel-cell.image-multi.is-selected img:first-of-type{
-		top: 10%;
-		left: 0%;
-	}
-	
-	.flickity-prev-next-button {
-	  position: absolute;
-	  top: 80%;
-	  width: 24px;
-	  height: 24px;
-	  border: none;
-	  border-radius: 50%;
-	  background: none!important;
-	  cursor: pointer;
-	  /* vertically center */
-	  -webkit-transform: translateY(-50%);
-	          transform: translateY(-50%);
-	}
-	
-	.locations-carousel-cell{
-		width: 80%;
-		height: 100%;
-	}
-	.locations-carousel-cell img{
-		width: 80%;
-		right: 0;
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-	}
-	}
-	
-	/*------------------------
-	Decorative shapes
-	-------------------------*/	
-	.dw-shapes{
-		background-repeat: no-repeat;
-		width: 100%;
-		position: absolute;
-		z-index: 1;
-		pointer-events: none;
-	}
-	.dw-shapes-circle-red-dot-right{
-		background-image: url('../img/dw-shapes-circle-red-dot.png');
-		margin-left: 60%;
-		margin-top: 40%;
-				background-size: 1400px;
-		
-		
-	}
-	
-	.dw-shapes-circle-red-dot-left{
-		background-image: url('../img/dw-shapes-circle-red-dot.png');
-		margin-left: -80%;
-		margin-top: 0%;
-				background-size: 1400px;
-		
-	}
-	
-	.dw-shapes-box-blue-dot-right{
-		background-image: url('../img/dw-shapes-box-blue-dot.png');
-		margin-left: 70%;
-		margin-top: 0%;
-				background-size: 1000px;
-		
-		
-	}
 /*------------------------
-	Activision
--------------------------*/	
-
-.ablogo{
-	fill: white;
-}
-
-
-/*------------------------
-	Home Slideshow
+	Entry
 -------------------------*/
-
-
-.home-image{
-	width: 100%;
+.entry-title{
+	position: absolute;
 	top: 0;
-	height: auto;
-	display: block;
-}
-
-
-@media (max-width: 768px) {
-.home-image{
+	padding-top: 25vh;
+	
+	z-index: 5;
+	width: 100%;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3f2102+0,000000+80&0.65+0,0+88 */
+	background: -moz-linear-gradient(top, rgba(63,33,2,0.65) 0%, rgba(0,0,0,0.06) 80%, rgba(0,0,0,0) 88%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(63,33,2,0.65) 0%,rgba(0,0,0,0.06) 80%,rgba(0,0,0,0) 88%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(63,33,2,0.65) 0%,rgba(0,0,0,0.06) 80%,rgba(0,0,0,0) 88%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a63f2102', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 	
 }
-}
-
-/*--Standard--*/
-.rslides {
-  position: relative;
-  list-style: none;
-  overflow: hidden;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  }
-
-.rslides li {
-  -webkit-backface-visibility: hidden;
-  position: absolute;
-  display: none;
-  width: 100%;
-  left: 0;
-  top: 0;
-  }
-
-.rslides li:first-child {
-  position: relative;
-  display: block;
-  float: left;
-  }
-
-
-
-.rslides img {
-  display: block;
-  height: auto;
-  float: left;
-  width: 100%;
-  border: 0;
-  }
-  
- 
- /*--custom--*/
- 
-.rslides{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	z-index: 1;
-}
- 
- .rslides li {
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-	background-position: center;
-   }
- 
-#gradient{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	z-index: 0;
-}
-
-
-@media (max-width: 768px) {
-.rslides{
-	height: 150%;
-}
-
- 
-#gradient{
-	height: 150%;
-
-}
-
-}
-
 /*------------------------
 	Lists
 -------------------------*/
@@ -372,7 +61,10 @@ ul.red.dot > li::before {
   display: inline-block;
 }
 
-
+li{
+		font-weight: 400;
+	
+}
 /*------------------------
 	Inview animations
 -------------------------*/
@@ -444,33 +136,6 @@ ul.red.dot > li::before {
 }
 
 /*------------------------
-	Pages Images
--------------------------*/
-
-.top-image{
-	width: 100%;
-	position: absolute;
-	top: 0;
-	height: auto;
-	display: block;
-	height: 90vh;
-	overflow: hidden;
-}
-.top-image .columns{
-	text-align: right;
-}
-
-@media (max-width: 768px) {
-.top-image{
-	position: absolute;
-	top: 50vh;
-		width: 70%;
-		left: 30%;
-	
-}
-}
-
-/*------------------------
 	Header
 -------------------------*/
 header{
@@ -481,9 +146,23 @@ header{
 .sonica-logo{
 width: 99%;
 margin: auto;
-	padding: 20px 0;
 }
-
+.sonica-logo svg{
+		padding: 20px 0;
+	
+}
+.logo-orange-fill header .sonica-logo{
+	fill: #f15a22;
+}
+.logo-white-fill header .sonica-logo{
+	fill: white;
+}
+.logo-white-stroke header .sonica-logo{
+	stroke: white;
+	  stroke-width: .4;
+	  fill: none;
+	
+}
 /*------------------------
 	inline
 -------------------------*/
@@ -501,40 +180,11 @@ margin: auto;
 
 
 /*------------------------
-	Menu
-
-.m-menu{
-	position: fixed;
-	z-index: 500; 
-	width: 70%;
-	top: 0;
-	left: 0;
-	margin-left: 30%;
-	padding-top: 25vh;
-	padding-right: 5%;
-	-webkit-transition:all .1s ease-in;  
-	-moz-transition:all .1s ease-in;  
-	-o-transition:all .1s ease-in;  
-	transition:all .1s ease-in;
-	opacity: 0;
-	pointer-events: none;
-}
-.m-menu-list li{
-	font-weight: 600;
-}
-
-/*------------------------
 	Colour
 -------------------------*/
 
 .orange{	color: #f15a22;	fill: #f15a22;}
 .bg-orange{	background-color: #f15a22;}
-
-.red{	color: #fe6363;	fill: #fe6363;}
-.bg-red{	background-color: #fe6363;}
-
-.blue{	color: #2ac5f4;	fill: #2ac5f4;}
-.bg-blue{	background-color: #2ac5f4;}
 
 
 .black{	color: #343434;}
@@ -550,20 +200,11 @@ margin: auto;
 	border: 1px solid white!important;
 }
 
-.dark-grey{	color: #59595a; fill:#59595a}
-.bg-dark-grey{	background-color: #59595a;}
 
 .white p{
 }
 
 
-.bg-green{	background-color: #00c15f;}
-.bg-light-green{	background-color: #e3f7ee;}
-.bg-lighter-green{	background-color: #f0fbf5;}
-.bg-black{	background-color: #423f40;}
-
-.bg-black{
-}
 
 
 /*------------------------
@@ -614,342 +255,6 @@ a:focus{
 .no_ul:focus{
 	text-decoration: none;
 	border-bottom: none;
-}
-
-/*------------------------
-	callback
--------------------------*/
-.callback{
-	display: block;
-	float: left;
-	margin: 0;
-	padding: 0;
-}
-.callback.first{
-border-right: 1px solid #e3f7ee;
-}
-.callback.first,
-.callback.second{
-width: 37.5%;
-height: 90%;
-}
-.callback.third{
-width: 25%;
-}
-
-@media only screen and (max-width: 768px) {
-.callback{
-	display: block;
-	float: left;
-	margin: 0;
-	padding: 0;
-}
-.callback.first{
-border-right: 0px solid #e3f7ee;
-	border-bottom: 1px solid #e3f7ee;
-
-}
-.callback.first,
-.callback.second{
-width: 100%;
-height: 90%;
-}
-.callback.third{
-width: 100%;
-}
-
-
-}
-/*------------------------
-	services
--------------------------*/
-.service.odd .service-icon{
-		float: left;
-}
-.service.even .service-icon{
-		float: right;
-}
-.service-icon{
-	width: 50%;
-	display: block;
-	padding-top: 50%;
-	position: relative;
-}
-.service-icon *{
-	position: absolute;
-}
-.service-icon h3{
-	width: 100%;
-	height: 20%;
-	text-align: center;
-	top: 5%;
-}
-.service-icon .icon{
-	width: 50%;
-	height: 27%;
-	text-align: center;
-	top: 39%;
-}
-.service-icon .icon svg{
-	stroke-width: .5;
-}
-
-.service.odd .service-text{
-		float: right;
-}
-.service.even .service-text{
-		float: left;
-}
-.service-text{
-width: 50%;
-display: block;
-float: right;
-padding-top: 50%;
-position: relative;
-}
-.service-text p{
-width: 70%;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-
-}
-.service.odd .service-image{
-		float: left;
-}
-.service.even .service-image{
-		float: right;
-}
-.service-image{
-	width: 50%;
-	display: block;
-	padding-top: 50%;
-	position: relative;
-	float: left;
-}
-.service-image *{
-	position: absolute;
-}
-.service-image h3{
-	width: 130%;
-	height: 20%;
-	text-align: center;
-	top: 5%;
-}
-.service.odd .service-image-holder,
-.service.odd .service-image h3{
-	margin-left: -30%;
-}
-.service-image-holder{
-width: 130%;
-position: absolute;
-height: 100%;
-top: 0;
-}
-
-.service-image img{
-width: 90%;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -40%);
-
-}
-
-@media only screen and (max-width: 570px) {
-
-.odd .service-icon,
-.odd .service-text
-{
-	background-color:  #e3f7ee;
-}
-
-.even .service-icon,
-.even .service-text
-{
-	background-color: #f0fbf5;
-}
-.service-icon{
-	width: 100%;
-	display: block;
-	padding-top: 10%;
-	position: relative;
-}
-.service-icon *{
-	position: relative;
-}
-.service-icon h3{
-	width: 100%;
-	height: 20%;
-	text-align: center;
-	top: 5%;
-}
-.service-icon .icon svg{
-	padding-top: 10%;
-	width: 40%;
-	margin-left:30%;
-	text-align: center;
-}
-.service-icon .icon svg{
-	stroke-width: .5;
-}
-
-.service.odd .service-text{
-		float: right;
-}
-.service.even .service-text{
-		float: left;
-}
-.service-text{
-width: 100%;
-display: block;
-float: right;
-padding-top: 10%;
-padding-bottom: 10%;
-position: relative;
-}
-.service-text p{
-width: 80%;
-position: relative;
-top: 0%;
-left: 10%;
-transform: translate(0%, 0%);
-
-}
-
-.service-image{
-	width: 100%;
-	display: block;
-	padding-top: 100%;
-	position: relative;
-	float: left;
-}
-
-.service.odd .service-image-holder,
-.service.odd .service-image h3,
-.service.even .service-image-holder,
-.service.even .service-image h3
-{
-	margin-left: -15%;
-}
-
-
-
-}
-
-
-/*------------------------
-	Home
--------------------------*/
-.m-home{
-	background-position: top center;
-}
-.stats{
-	position: relative;
-	z-index: 2;
-}
-.stats{
-			background-image: url('../img/graph.png');
-	background-size: 1156px;
-	background-position: bottom 0px right -200px;
-	background-repeat: no-repeat;
-}
-.svg-image{
-	height: 100vh;
-	width: 100vw;
-	position: absolute;
-}
-#home-intro .svg-image svg{
-	width: 60%;
-	margin-left: 23%;
-	margin-right: auto;
-	display: block;
-}
-#services-intro .svg-image svg{
-	width: 40%;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-}
-.services-list li{
-
-	margin-bottom: 5%;
-}
-.services-list .icon svg{
-  stroke-width: .7;
-
-	width: 105px;
-	height: 75px;
-	padding: 5%;
-	stroke: red;
-	margin-bottom: 5%;
-}
-@media only screen and (max-width: 768px) {
-
-#home-intro .svg-image svg{
-	width: 120%;
-	margin-left: -5%;
-
-}
-#services-intro .svg-image svg{
-width: 90%;
-margin-left: 5%;
-
-}
-.services-list li{
-	margin-bottom: 10%;
-}
-
-.services-list .icon svg{
-  stroke-width: .7;
-
-	width: 205px;
-	height: 105px;
-	padding: 5%;
-	stroke: red;
-	margin-bottom: 0%;
-}
-}
-
-@media only screen and (max-width: 570px) {
-.services-list .icon svg{
-  stroke-width: .7;
-
-	width: 105px;
-	height: 55px;
-	padding: 5%;
-	stroke: red;
-	margin-bottom: 0%;
-}
-}
-/*------------------------
-	Map
--------------------------*/
-
-#googleMap iframe {
-   width: 100%;
-   z-index: 1;
-
-}
-#googleMap {
-   min-height: 40vh;
-}
-#googleMap img { max-width: none; }
-
-/*------------------------
-	insights
--------------------------*/
-.insights-image{
-
-	margin-left: auto;
-	margin-right: auto;
-}
-@media only screen and (max-width: 570px) {
-
-.insights-image{
-	width: 60%;
-	margin-left: 20%;
-}
 }
 
 

@@ -1,0 +1,47 @@
+{# Case Study #}
+
+{% extends "_layout" %}
+{% set bodyClass = "logo-white-stroke" %}
+{% block content %}
+
+<div class="page bg-white">
+
+<img class="" src="{% for asset in entry.leadImage %}{{ asset.url }}{% endfor %}" alt="{{entry.title}}" />
+
+<div class="entry-title white">
+	<div class="row">
+		<div class="three columns"><strong>{{entry.title}}</strong></div>
+		<div class="two columns end"><strong>{{entry.location}}</strong></div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="six columns">
+		{{entry.details}}
+	</div>
+	<div class="four columns offset-by-two">
+		<p class="orange text-medium">{{entry.quote}}</p>
+		<br />
+		<span class="text-small">{{entry.quoteAttribution}}</span>
+	</div>
+</div>
+	
+<div class="row pad-top-15 text-small">
+	<div class="three columns">
+		<h3><strong>Size</strong></h3>
+		{{entry.size}}
+	</div>
+	<div class="three columns">
+		<h3><strong>Timescale</strong></h3>
+		{{entry.timescale}}
+	</div>
+	<div class="three columns end">
+		<h3><strong>Features</strong></h3>
+		{{entry.features}}
+	</div>
+	
+</div>
+	
+	
+</div><!--End Page-->
+{% endblock %}

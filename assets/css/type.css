@@ -28,6 +28,7 @@ text-rendering: optimizeLegibility;
 -webkit-font-smoothing: antialiased;
 line-height: 31px;
 font-size: 20px;
+font-weight: 100;
 	
 }
 p.wide{
@@ -109,8 +110,10 @@ ul.text-medium li,
 .text-medium a,
 .text-medium p,
 .text-medium span {
-	line-height: 46px;
+	line-height: 38px;
 	font-size: 30px;
+	font-weight: 300;
+	width: 88%;
 	
 }
 p.text-large,

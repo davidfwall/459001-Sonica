@@ -18,7 +18,7 @@
  #}
 
 {% extends "_layout" %}
-{% set bodyClass = "" %}
+{% set bodyClass = "logo-white-fill" %}
 
 {% block content %}
 
@@ -28,7 +28,7 @@
 </div>
 <div class="row">
 	<ul class="block-grid two-up mobile">
-		<li class="vh-65 bg-blue"><div class="row"><div class="nine columns end"><h1 class="text-xlarge orange">Expect more from your fit-out contractor.</h1></div></div></li>
+		<li class="vh-65 bg-blue"><div class="row"><div class="nine columns end"><h1 class="text-xlarge orange text-extended">Expect more from your fit-out contractor.</h1></div></div></li>
 	{% for entry in craft.entries.section('caseStudies') %}
 		<li class="vh-65 bg-red"><a href=""><div class="row"><div class="five columns">{{ entry.title }}</div><div class="five columns offset-by-one end">{{ entry.location }}</div></div></a></li>
 	{% endfor %}

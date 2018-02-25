@@ -73,11 +73,11 @@
 </div>
 <div class="row pad-top-15">
 <div class="twelve columns">
-	<ul class="block-grid six-up mobile">
+	<ul class="gridder">
 		{% for entry in craft.entries.section('team') %}
-			<li class="text-small">
-				<a href="" class="no_ul"><img class="" src="{% for asset in entry.portraitImage %}{{ asset.url }}{% endfor %}" alt="{{entry.title}}" /></a>
-				<a href="">{{ entry.title }}</a>
+			<li class="text-small gridder-list" data-griddercontent="#{{entry.slug}}">
+				<img class="" src="{% for asset in entry.portraitImage %}{{ asset.url }}{% endfor %}" alt="{{entry.title}}" />
+				<a>{{ entry.title }}</a>
 				<br />
 				{{ entry.role }}
 				<br /><br />
@@ -86,6 +86,25 @@
 	</ul>
 </div>
 
+{% for entry in craft.entries.section('team') %}
+<div id="{{entry.slug}}" class="gridder-content">
+    <div class="row text-small">
+        <div class="three columns">
+            <p><span class="orange">My Job</span> {{ entry.myJob }}</p>
+        </div>
+        <div class="three columns">
+            <p><span class="orange">Why Sonica?</span> {{ entry.whySonica }}</p>
+           </div>
+        <div class="three columns">
+            <p><span class="orange">What I Love Doing</span> {{ entry.whatILoveDoing }}</p>
+        </div>
+        <div class="three columns">
+            <a href="mailto:{{ entry.email }}" class="orange">{{ entry.email }}</a>
+        </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
 
 
 

@@ -201,6 +201,9 @@ margin: auto;
 .orange{	color: #f15a22;	fill: #f15a22;}
 .bg-orange{	background-color: #f15a22;}
 
+.hasSelectedItem .gridder-list.selectedItem{
+	color: #f15a22!important;
+}
 
 .black{	color: #343434;}
 .bg-black{	background-color: #343434;}

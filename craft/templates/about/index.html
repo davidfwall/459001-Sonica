@@ -6,7 +6,7 @@
 
 <div class="page bg-white">
 
-<div class="row pad-top-50">
+<div class="row pad-top-50 fade-in">
 	<div class="twelve columns text-large">
 		<p class="wide">At Sonica, we have the highest expectations of ourselves and our work, and complete confidence in our own ability to meet those expectations. That confidence is built on a wealth of expertise in every element of office fit-out from construction to site logistics to tech install. That confidence is built on clear communication, integrity and strong professional relationships. That confidence is built on the knowledge that by pulling in the same direction, our strengths are not just added together, but multiplied. That confidence is built on the experience of 150 completed fit-out projects – and counting.
 		</p>
@@ -16,7 +16,7 @@
 	</div>
 </div>
 
-<div class="row pad-top-35">
+<div class="row pad-top-35 fadein fast">
 	<div class="four columns">
 		<h2 class="orange text-large text-extended">
 			Our Approach
@@ -32,7 +32,7 @@
 		</p>
 	</div>
 	</div>
-<div class="row pad-top-5">
+<div class="row pad-top-5 fadein fast">
 	<div class="four columns">
 		<h3><strong><span class="orange">3. </span>Costing</strong></h3>
 		<p>We have an extensive roster of sub-contract partners from whom we assemble the right team for the parameters of your job. Sonica’s Surveying Team then analyses the costings provided by our partners to produce a detailed budget recommendation, which we will present to you to review and sign-off.
@@ -58,12 +58,12 @@
 
 
 <div class="row pad-top-35">
-	<div class="four columns">
+	<div class="four columns fadeup slow">
 		<h2 class="orange text-large text-extended">
 			Our Team
 		</h2>
 	</div>
-	<div class="six columns offset-by-two end">
+	<div class="six columns offset-by-two end fadeup slow">
 		<p>From the boardroom to the job site, every member of the Sonica team is driven by the same motivations: to provide a service that goes beyond our clients expectations, and to always strive to improve what we offer.
 		</p>	
 		<p>We believe that by creating an environment founded on encouragement and teamwork, we allow our people to do their best work. That’s something that satisfies both our clients and ourselves.
@@ -73,7 +73,7 @@
 </div>
 <div class="row pad-top-15">
 <div class="twelve columns">
-	<ul class="gridder">
+	<ul class="gridder fadeup fast">
 		{% for entry in craft.entries.section('team') %}
 			<li class="text-small gridder-list" data-griddercontent="#{{entry.slug}}">
 				<img class="" src="{% for asset in entry.portraitImage %}{{ asset.url }}{% endfor %}" alt="{{entry.title}}" />

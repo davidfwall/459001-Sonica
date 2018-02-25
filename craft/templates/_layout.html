@@ -52,6 +52,23 @@
 
 <!-- inview -->
 <script src="{{ siteUrl }}assets/js/jquery.inview.min.js"></script>
+<script type="text/javascript">
+$('.fadein, .fadeup').bind('inview', function (event, visible, topOrBottomOrBoth) {
+  if (visible == true) {
+    $(this).addClass( "inview" );
+    if (topOrBottomOrBoth == 'top') {
+      // top part of element is visible
+    } else if (topOrBottomOrBoth == 'bottom') {
+      // bottom part of element is visible
+    } else {
+      // whole part of element is visible
+    }
+  } else {
+    $(this).removeClass( "inview" );
+  }
+});
+</script>
+
 
 <!-- gridder -->
 <script src="{{ siteUrl }}assets/js/jquery.gridder.min.js"></script>
@@ -91,6 +108,7 @@
           $('body').addClass('loaded');
         });    
 </script>
+
 
 
 

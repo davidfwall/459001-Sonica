@@ -85,6 +85,7 @@
 		{% endfor %}
 	</ul>
 </div>
+</div>
 
 {% for entry in craft.entries.section('team') %}
 <div id="{{entry.slug}}" class="gridder-content">
@@ -103,10 +104,33 @@
         </div>
         </div>
     </div>
-</div>
 {% endfor %}
 
 
+<div class="row pad-top-25">
+<div class="twelve columns">
+	<a href="#" class="no_ul reveal"><strong>Full Project List</strong></a>
+</div>
+</div>
+
+<div class="reveal-show">
+<div class="row pad-top-5 pad-bottom-15 fadein">
+<div class="twelve columns">
+<ul class="css-four-columns" id="abcsort">
+{% for entry in craft.entries.section('settings') %}
+{% for row in entry.projectsCompleted %}
+    <li><span class="title">{{ row.projectName }}</span></li>
+{% endfor %}
+{% endfor %}
+
+{% for entry in craft.entries.section('caseStudies').order('title').find() %}
+	<li class="show-link"><span class="title">{{ entry.title }}</span><a href="{{ entry.url }}">{{ entry.title }}</a>
+	</li>
+{% endfor %}
+</ul>
+</div>
+</div>
+</div>
 
 </div><!--End Page-->
 {% endblock %}

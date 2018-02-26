@@ -110,6 +110,26 @@ $('.fadein, .fadeup').bind('inview', function (event, visible, topOrBottomOrBoth
 </script>
 
 
+<script>
+$(document).ready(function () {
+
+
+        $("#abcsort").html(
+
+            $("#abcsort").children("li").sort(function (a, b) {
+    
+                return $(a).text().toUpperCase().localeCompare(
+    
+                $(b).text().toUpperCase());
+    
+            }) // End Sort
+
+        ); // End HTML 
+
+}); // End Document Ready
+    
+    </script>
+
 
 
 </body>

@@ -42,6 +42,19 @@
 	
 </div>
 	
+<div class="row pad-top-15">
+<div class="twelve columns">
+	{% set numberOfPhotos = entry.projectImages|length %}
+	<ul class="image-grid images-{{numberOfPhotos}}">
+	{% for asset in entry.projectImages %}
+	<li style="background-image: url('{{ asset.url('webLarge') }}');">
+	</li>
+	{% endfor %}	
+	</ul>
+</div>
+</div>
 	
 </div><!--End Page-->
+<div class="pad-top-30 bg-white"></div>
+
 {% endblock %}

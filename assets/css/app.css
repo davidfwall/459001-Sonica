@@ -31,7 +31,7 @@ hr{
 .entry-title{
 	position: absolute;
 	top: 0;
-	padding-top: 22vh;
+	padding-top: 27vh;
 	height: 40vh;
 	z-index: 5;
 	width: 100%;
@@ -274,8 +274,33 @@ a:focus{
 	border-bottom: none;
 }
 
+/*------------------------
+ABC sort
+-------------------------*/
+
+.show-link .title{
+	display: none;
+}
 
 
-
-
-
+/*------------------------
+images
+-------------------------*/
+.image-grid{
+	width: calc(100% + 18px);
+}
+.image-grid li{
+margin-right: 18px;
+margin-bottom: 18px;
+background-size: cover;
+background-position: center;
+}
+.image-grid li{
+	width: calc(33.333% - 18px);
+	float: left;
+	position: relative;
+}
+.image-grid li:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;}

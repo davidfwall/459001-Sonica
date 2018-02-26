@@ -6,7 +6,9 @@
 
 <div class="page bg-white">
 
-<img class="" src="{% for asset in entry.leadImage %}{{ asset.url('webLarge') }}{% endfor %}" alt="{{entry.title}}" width="100%" />
+<img class="" src="{% for asset in entry.leadImage %}{{ asset.url('webLarge') }}{% endfor %}" alt="{{entry.title}}" width="100%" style="background-color: #ccc;min-height: 100vh;"/>
+
+
 
 <div class="entry-title white">
 	<div class="row">
@@ -19,7 +21,7 @@
 	<div class="six columns">
 		{{entry.details}}
 	</div>
-	<div class="four columns offset-by-two">
+	<div class="four columns offset-by-two fadeup slower">
 		<p class="orange text-medium">{{entry.quote}}</p>
 		<br />
 		<span class="text-small">{{entry.quoteAttribution}}</span>
@@ -27,15 +29,15 @@
 </div>
 	
 <div class="row pad-top-15 text-small">
-	<div class="three columns">
+	<div class="three columns fadein fast">
 		<h3><strong>Size</strong></h3>
 		{{entry.size}}
 	</div>
-	<div class="three columns">
+	<div class="three columns fadein ">
 		<h3><strong>Timescale</strong></h3>
 		{{entry.timescale}}
 	</div>
-	<div class="three columns end">
+	<div class="three columns fadein slow end">
 		<h3><strong>Features</strong></h3>
 		{{entry.features}}
 	</div>
@@ -45,9 +47,10 @@
 <div class="row pad-top-15">
 <div class="twelve columns">
 	{% set numberOfPhotos = entry.projectImages|length %}
-	<ul class="image-grid images-{{numberOfPhotos}}">
+	<ul class="image-grid images-{{numberOfPhotos}}" id="lightgallery">
 	{% for asset in entry.projectImages %}
-	<li style="background-image: url('{{ asset.url('webLarge') }}');">
+	<li>
+	<a href="{{ asset.url('webMedium') }}" style="background-image: url('{{ asset.url('webMedium') }}');" class="fadeup slow no_ul lg-link"></a>
 	</li>
 	{% endfor %}	
 	</ul>

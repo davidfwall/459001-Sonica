@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="{{ siteUrl }}assets/css/grid-twelve.css" />
 	<link rel="stylesheet" href="{{ siteUrl }}assets/css/form.css" />
 	<link rel="stylesheet" href="{{ siteUrl }}assets/css/gridder.css" />
+	<link rel="stylesheet" href="{{ siteUrl }}assets/css/lightgallery.css" />
 	<link rel="stylesheet" href="{{ siteUrl }}assets/css/app.css" />
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" href="{{ siteUrl }}assets/css/ie.css">
@@ -86,7 +87,22 @@ $('.fadein, .fadeup').bind('inview', function (event, visible, topOrBottomOrBoth
     });
 </script>
 
+<script src="{{ siteUrl }}assets/js/lightgallery.min.js"></script>
 
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery({
+        selector:'.lg-link',
+        thumbnail: false,
+        fullscreen: false,
+        zoom: false,
+        hash: false,
+        autoplayControls: false,
+        download: false,
+        share: false
+        }); 
+    });
+</script>
 
 <script src="{{ siteUrl }}assets/js/responsiveslides.min.js"></script>
  <script>
@@ -96,39 +112,31 @@ $('.fadein, .fadeup').bind('inview', function (event, visible, topOrBottomOrBoth
       $("#homeslide").responsiveSlides({
         speed: 1200,
         timeout: 6200,
+
         
       });
 
     });
   </script>
 
-
+<!-- Loaded -->
 <script>
         $(document).ready(function() {
           $('body').addClass('loaded');
         });    
 </script>
 
-
+<!-- ABC Sort -->
 <script>
 $(document).ready(function () {
-
-
         $("#abcsort").html(
-
             $("#abcsort").children("li").sort(function (a, b) {
-    
                 return $(a).text().toUpperCase().localeCompare(
-    
                 $(b).text().toUpperCase());
-    
             }) // End Sort
-
         ); // End HTML 
-
 }); // End Document Ready
-    
-    </script>
+</script>
 
 
 

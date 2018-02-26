@@ -8,65 +8,28 @@
  */
 
 return array(
-	'*' => array(
-		'defaultWeekStartDay' => 0,
-		'enableCsrfProtection' => true,
-		'omitScriptNameInUrls' => 'true',
-		'useEmailAsUsername' => true,
-		'generateTransformsBeforePageLoad' => true,
-		'sendPoweredByHeader' => false,
-		'cpTrigger' => 'admin',
-		'devMode' => false,
-		'usePathInfo' => true,
 
-		// MailChimp Plugin Settings https://github.com/aelvan/mailchimp-subscribe-craft
-		'mcsubApikey' => 'xxxxxxxxxxxxxxxxxxxxx-us2',
-		'mcsubListId' => '2fd6ec09cf',
-		'mcsubDoubleOptIn' => false
+	// Base site URL
+	'siteUrl' => null,
 
-	),
+	// Environment-specific variables (see https://craftcms.com/docs/multi-environment-configs#environment-specific-variables)
+	'environmentVariables' => array(),
 
-  // Live (production) environment
-    '.ie'  => array(
-		'siteUrl' => 'http://www.fmco.ie/',
-		'isSystemOn' => true,
-		'devMode' => true,
-		'allowAutoUpdates' => false,
-		'environmentVariables' => array(
-			'baseUrl'  => 'http://www.fmco.ie/',
-			'basePath' => '/home/ibrennan/webapps/fmco2018/'
-		),
-		),
-		// Dev (staging) environment
-    'ibrennan.webfactional.com'  => array(
-			'siteUrl' => 'http://ibrennan.webfactional.com',
-			'isSystemOn' => true,
-			'devMode' => true,
-			'environmentVariables' => array(
-				'baseUrl'  => 'http://ibrennan.webfactional.com/',
-				'basePath' => '/home/ibrennan/webapps/fmco2018/'
-			),
-			),
-    // RMM Local (development) environment
-    '.local'  => array(
-		'siteUrl' => 'http://fmco.local/',
-		'isSystemOn' => true,
-		'devMode' => true,
-		'craftEnv' => 'local',
-		'environmentVariables' => array(
-			'baseUrl'  => 'http://fmco.local/',
-			'basePath' => '/Users/johnhenry/Sites/fmco-local/'
-		),
-	),
-	// WorkGroup Local (development) environment
-    'localhost:8888'  => array(
-		'siteUrl' => 'http://localhost:8888/186007-FMco/',
-		'isSystemOn' => true,
-		'devMode' => true,
-		'craftEnv' => 'local',
-		'environmentVariables' => array(
-			'baseUrl'  => 'http://localhost:8888/186007-FMco/',
-			'basePath' => '/Applications/MAMP/htdocs/186007-FMco/'
-		),
-    )
-  );
+	// Default Week Start Day (0 = Sunday, 1 = Monday...)
+	'defaultWeekStartDay' => 0,
+
+	// Enable CSRF Protection (recommended, will be enabled by default in Craft 3)
+	'enableCsrfProtection' => true,
+
+	// Whether "index.php" should be visible in URLs (true, false, "auto")
+	'omitScriptNameInUrls' => 'auto',
+
+	// Control Panel trigger word
+	'cpTrigger' => 'admin',
+
+	// Dev Mode (see https://craftcms.com/support/dev-mode)
+	'devMode' => false,
+	
+	
+
+);

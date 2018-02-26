@@ -289,12 +289,13 @@ images
 .image-grid{
 	width: calc(100% + 18px);
 }
-.image-grid li{
+.image-grid li a{
 margin-right: 18px;
 margin-bottom: 18px;
 background-size: cover;
 background-position: center;
 }
+/*
 .image-grid li{
 	width: calc(33.333% - 18px);
 	float: left;
@@ -304,3 +305,193 @@ background-position: center;
   content: "";
   display: block;
   padding-bottom: 100%;}
+  -------------------------*/
+  
+  
+  .image-grid li:nth-child(1n+0) a,
+  .image-grid li:nth-child(3n+0) a
+  {
+	width: calc(33.333% - 18px);
+	float: left;
+	position: relative;
+  }
+  .image-grid li:nth-child(2n+0) a
+  {
+  	width: calc(66.666% - 18px);
+  	float: right;
+  	position: relative;
+  }
+  .image-grid li:nth-child(4n+0) a
+  {
+  	width: calc(100% - 18px);
+  	float: left;
+  	position: relative;
+  }
+	.image-grid li:nth-child(1n+0) a:after,
+	.image-grid li:nth-child(2n+0) a:after {
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+	}
+	.image-grid li a:after {
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+	}
+	.image-grid li:nth-child(4n+0) a:after {
+	content: "";
+	display: block;
+	padding-bottom: 66%;
+	}
+
+
+/*1*/
+.image-grid.images-1 li a
+{
+	width: calc(100% - 18px);
+	float: left;
+	position: relative;
+}
+.image-grid.images-1 li a:after {
+content: "";
+display: block;
+padding-bottom: 66%;
+}
+
+/*2*/
+.image-grid.images-2 li a
+{
+	width: calc(50% - 18px);
+	float: left;
+	position: relative;
+}
+
+.image-grid.images-1 li a:after {
+content: "";
+display: block;
+padding-bottom: 100%;
+}
+      
+      
+
+/*5*/
+.image-grid.images-5 li:nth-child(4n+0) a,
+.image-grid.images-5 li:nth-child(5n+0) a
+{
+	width: calc(50% - 18px);
+	float: left;
+	position: relative;
+}
+
+.image-grid.images-5 li:nth-child(4n+0) a:after {
+content: "";
+display: block;
+padding-bottom: 100%;
+}
+      
+      
+/*6*/
+.image-grid.images-6 li:nth-child(5n+0) a,
+.image-grid.images-6 li:nth-child(6n+0) a
+{
+	width: calc(50% - 18px);
+	float: left;
+	position: relative;
+}
+
+/*9*/
+.image-grid.images-9 li:nth-child(8n+0) a,
+.image-grid.images-9 li:nth-child(9n+0) a
+{
+	width: calc(50% - 18px);
+	float: left;
+	position: relative;
+}
+.image-grid.images-9 li:nth-child(8n+0) a:after {
+content: "";
+display: block;
+padding-bottom: 100%;
+}
+      
+/*10*/
+.image-grid.images-10 li:nth-child(9n+0) a,
+.image-grid.images-10 li:nth-child(10n+0) a
+{
+	width: calc(50% - 18px);
+	float: left;
+	position: relative;
+}
+
+/*13*/
+.image-grid.images-13 li:nth-child(12n+0) a,
+.image-grid.images-13 li:nth-child(13n+0) a
+{
+	width: calc(50% - 18px);
+	float: left;
+	position: relative;
+}
+.image-grid.images-13 li:nth-child(12n+0) a:after {
+content: "";
+display: block;
+padding-bottom: 100%;
+}
+
+/*14*/
+.image-grid.images-14 li:nth-child(13n+0) a,
+.image-grid.images-14 li:nth-child(14n+0) a
+{
+	width: calc(50% - 18px);
+	float: left;
+	position: relative;
+} 
+    
+
+/*17*/
+.image-grid.images-17 li:nth-child(16n+0) a,
+.image-grid.images-17 li:nth-child(17n+0) a
+{ 
+	width: calc(50% - 18px);
+	float: left;
+	position: relative;
+}      
+.image-grid.images-17 li:nth-child(16n+0) a:after {
+content: "";
+display: block;
+padding-bottom: 100%;
+}
+
+
+
+/*18*/
+.image-grid.images-18 li:nth-child(17n+0) a,
+.image-grid.images-18 li:nth-child(18n+0) a
+{
+	width: calc(50% - 18px);
+	float: left;
+	position: relative;
+} 
+      
+/*21*/
+.image-grid.images-21 li:nth-child(20n+0) a,
+.image-grid.images-21 li:nth-child(21n+0) a
+{
+	width: calc(50% - 18px);
+	float: left;
+	position: relative;
+}      
+.image-grid.images-21 li:nth-child(20n+0) a:after {
+content: "";
+display: block;
+padding-bottom: 100%;
+}
+
+/*22*/
+.image-grid.images-22 li:nth-child(21n+0) a,
+.image-grid.images-22 li:nth-child(22n+0) a
+{
+	width: calc(50% - 18px);
+	float: left;
+	position: relative;
+} 
+
+

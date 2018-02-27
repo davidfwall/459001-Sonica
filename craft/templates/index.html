@@ -18,16 +18,18 @@
  #}
 
 {% extends "_layout" %}
-{% set bodyClass = "logo-white-fill" %}
+{% set bodyClass = "logo-white-fill home" %}
 
 {% block content %}
 
 <div class="page">
+<div class="cover bg-orange"></div>
 
-<div class="row vh-90">
+<div class="row vh-95">
 	<div class="video-container">
 	  <video autoplay loop>
-	    <source type="video/mp4" src="http://blucube.net/stuff/codepen-assets/html5vid/beepl-pink-vynil.mp4">
+	    <source type="video/mp4" src="{{ siteUrl }}assets/video/sonica-home-15.mp4">
+	  {#  <source type="video/mp4" src="http://blucube.net/stuff/codepen-assets/html5vid/beepl-pink-vynil.mp4">#}
 	    <source type="video/webm" src="http://blucube.net/stuff/codepen-assets/html5vid/beepl-pink-vynil.webm">
 	    <source type="video/ogg" src="http://blucube.net/stuff/codepen-assets/html5vid/beepl-pink-vynil.ogv">
 	  </video>

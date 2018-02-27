@@ -22,14 +22,20 @@ class ImageColorPlugin extends BasePlugin
     {
         return 'http://familiar-studio.com';
     }
-
-    // public function init()
-    // {
-    //     craft()->on('assets.onSaveFileContent', function(Event $event) {
-    //         craft()->imageColor->saveColors($event->params['asset']);
-    //     });
-    // }
-
+	
+	public function init()
+    {
+    
+    	/*
+craft()->on('assets.onSaveFileContent', function(Event $event) {
+	
+			craft()->imageColor->saveColors($event->params['asset']);
+		});
+		
+*/
+    
+    }
+	
     public function addTwigExtension()
     {
         Craft::import('plugins.imagecolor.twigextensions.ImageColorTwigExtension');

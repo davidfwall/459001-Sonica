@@ -159,22 +159,28 @@ header{
 	width: 100vw;
 	z-index: 10;
 }
+.nav{
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+}
 .sonica-logo{
+padding-top: 3vh;
 width: 99%;
 margin: auto;
 }
-.sonica-logo svg{
+.sonica-logo a svg{
 		padding: 20px 0;
 	
 }
-.logo-orange-fill header .sonica-logo{
+.logo-orange-fill header .sonica-logo a{
 	fill: #f15a22;
 }
-.logo-white-fill header .sonica-logo{
+.logo-white-fill header .sonica-logo a{
 	fill: white;
 }
-.logo-white-stroke header .sonica-logo{
-	stroke: white;
+.logo-white-stroke header .sonica-logo a{
+	stroke: white!important;
 	  stroke-width: .4;
 	  fill: none;
 	
@@ -258,7 +264,6 @@ a{
 	-moz-transition:all .1s ease-in;  
 	-o-transition:all .1s ease-in;  
 	transition:all .1s ease-in;
-	  fill: currentColor;
 }
 a:hover, 
 a:focus{
@@ -295,6 +300,28 @@ margin-bottom: 18px;
 background-size: cover;
 background-position: center;
 }
+
+.image-grid li a::before{
+content: '+ Enlarge';
+position: absolute;
+background: rgba(241, 89, 33, 0.5);
+color: white;
+font-size: 14px;
+border-radius: 25px;
+padding: 2px 15px;
+margin: 12px;
+bottom: 0;
+font-weight: 500;
+-webkit-transition:all .1s ease-in;  
+-moz-transition:all .1s ease-in;  
+-o-transition:all .1s ease-in;  
+transition:all .1s ease-in;
+	opacity: 0;
+}
+.image-grid li a:hover::before{
+	opacity: 1;
+}
+
 /*
 .image-grid li{
 	width: calc(33.333% - 18px);

@@ -6,7 +6,12 @@
 
 <div class="page bg-white">
 
-<img class="" src="{% for asset in entry.leadImage %}{{ asset.url('webLarge') }}{% endfor %}" alt="{{entry.title}}" width="100%" style="background-color: #ccc;min-height: 100vh;"/>
+{% for asset in entry.leadImage %}
+<div style="background-color: {{ entry.leadImage[0]|imageColor }}; width: 100%;">
+<img class="" src="{{ asset.url('webMedium') }}" alt="{{entry.title}}" width="100%">
+</div>
+{% endfor %}
+
 
 
 
@@ -50,7 +55,7 @@
 	<ul class="image-grid images-{{numberOfPhotos}}" id="lightgallery">
 	{% for asset in entry.projectImages %}
 	<li>
-	<a href="{{ asset.url('webMedium') }}" style="background-image: url('{{ asset.url('webMedium') }}');" class="fadeup slow no_ul lg-link"></a>
+	<a href="{{ asset.url('webMedium') }}" style="background-image: url('{{ asset.url('webMedium') }}'); background-color: {{ entry.leadImage[0]|imageColor() }};" class="fadeup slow no_ul lg-link"></a>
 	</li>
 	{% endfor %}	
 	</ul>

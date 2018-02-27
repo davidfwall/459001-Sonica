@@ -2,8 +2,10 @@
 
 namespace Craft;
 
+
 class ImageColorTwigExtension extends \Twig_Extension
 {
+
     public function getName()
     {
         return Craft::t('Image Color');
@@ -18,6 +20,10 @@ class ImageColorTwigExtension extends \Twig_Extension
 
     public function imageColorFilter($image, $position = 0)
     {
-        return craft()->imageColor->getColor($image, $position);
+        
+		$color = craft()->imageColor->getColor($image, $position);
+        return $color ;
     }
+
+    
 }

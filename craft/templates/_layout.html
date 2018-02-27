@@ -32,7 +32,7 @@
 
 </head>
 
-<body class="{% if bodyClass is defined %}{{ bodyClass }}{% endif %} topinview">
+<body class="{% if bodyClass is defined %}{{ bodyClass }}{% endif %}">
 	<div id="container">
 
 		{% include "_includes/header" %}
@@ -169,6 +169,23 @@ $(document).ready(function(){
 	$(window).trigger('resize');
   
 });
+</script>
+
+ <!-- Cookie for intro animation-->
+<script src="{{ siteUrl }}assets/js/cookie.js"></script>
+
+<script>
+// Landing page cookie
+function landingSlide() {
+  var c = Cookies.get('landing');
+
+  if (c === "true") {
+    $("body").addClass("cookie");
+  } else {
+    Cookies.set('landing', 'true');
+  }
+}
+landingSlide();
 </script>
 
 

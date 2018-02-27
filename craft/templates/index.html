@@ -36,9 +36,9 @@
 	</div>
 </div>
 <div class="row">
-	<ul class="block-grid two-up mobile">
+	<ul class="block-grid two-up mobile bg-orange">
 		<li class="vh-65 bg-white"><div class="row pad-top-1"><div class="nine columns end"><h1 class="text-xlarge orange text-extended">Expect more from your fit-out contractor.</h1></div></div></li>
-	{% for entry in craft.entries.section('caseStudies') %}
+	{% for entry in craft.entries.section('caseStudies').limit(5) %}
 		<li class="vh-65 bg-cover bg-centered" style="background-image: url('{% for asset in entry.leadImage %}{{ asset.url('webMedium') }}{% endfor %}');" >
 		<a href="{{ entry.url }}" class="vh-65">
 		<div class="row white bg-fade vh-55 pad-top-2">
@@ -48,6 +48,17 @@
 		</a>
 		</li>
 	{% endfor %}
+	{% for entry in craft.entries.section('caseStudies').offset(5) %}
+		<li class="vh-65 bg-cover bg-centered fadein fast" style="background-image: url('{% for asset in entry.leadImage %}{{ asset.url('webMedium') }}{% endfor %}');" >
+		<a href="{{ entry.url }}" class="vh-65">
+		<div class="row white bg-fade vh-55 pad-top-2">
+			<div class="five columns"><strong>{{ entry.title }}</strong></div>
+			<div class="five columns offset-by-one end"><strong>{{ entry.location }}</strong></div>
+		</div>
+		</a>
+		</li>
+	{% endfor %}
+	
 	</ul>
 </div>
 </div>

@@ -45,6 +45,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c73f2102', e
 	home
 -------------------------*/
 
+.video-container {
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background: #000;
+  }
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  
+
 .bg-fade{
 	background: -moz-linear-gradient(top, rgba(63,33,2,0.65) 0%, rgba(0,0,0,0.06) 80%, rgba(0,0,0,0) 88%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top, rgba(63,33,2,0.65) 0%,rgba(0,0,0,0.06) 80%,rgba(0,0,0,0) 88%); /* Chrome10-25,Safari5.1-6 */

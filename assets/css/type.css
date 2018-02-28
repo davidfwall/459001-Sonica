@@ -9,7 +9,7 @@
 
 
 body {
-	font-family: 'GT America', 'Helvetica Neue', Arial, sans-serif;
+	font-family: 'sonica-standard', 'Helvetica Neue', Arial, sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 	-moz-osx-font-smoothing: grayscale;
@@ -20,7 +20,7 @@ body {
 	
 }
 .text-extended {
-font-family: 'GT America Extended', 'Helvetica Neue', Arial, sans-serif;
+font-family: 'sonica-extended', 'Helvetica Neue', Arial, sans-serif;
 -webkit-text-size-adjust: 100%;
 -ms-text-size-adjust: 100%;
 -moz-osx-font-smoothing: grayscale;
@@ -28,7 +28,6 @@ text-rendering: optimizeLegibility;
 -webkit-font-smoothing: antialiased;
 line-height: 31px;
 font-size: 20px;
-font-weight: 100;
 	
 }
 p.wide{
@@ -70,10 +69,14 @@ strong {
 
 
 .sc {
-	font: 11px/25px 'GT America Extended', 'Helvetica Neue', Arial, sans-serif;
+	font: 10px/25px 'sonica-extended', 'Helvetica Neue', Arial, sans-serif;
 	text-transform: uppercase;
-	letter-spacing: 2px;
-		font-weight: 500;
+	letter-spacing: 3px;
+		font-weight: 400;
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: inherit;
+		
+
 }
 
 
@@ -100,7 +103,7 @@ ul.text-small li,
 .text-small span {
 line-height: 24px;
 font-size: 15px;
-font-weight: 500;
+font-weight: 400;
 }
 
 p.text-medium,
@@ -125,7 +128,7 @@ ul.text-large li,
 .text-large span{
 	line-height: 52px;
 	font-size: 40px;
-	font-weight: 300;	
+	font-weight: 200;
 }
 
 p.text-xlarge,
@@ -135,8 +138,8 @@ ul.text-xlarge li,
 .text-xlarge a,
 .text-xlarge p,
 .text-xlarge span {
-line-height: 76px;
-font-size: 71px;
+line-height: 72px;
+font-size: 60px;
 font-weight: 300;
 }
 
@@ -202,7 +205,7 @@ ul.dash{
 	.text-small span {
 	line-height: 20px;
 	font-size: 8px;
-	font-weight: 500;
+	font-weight: 400;
 	}
 	.m-text-regular,
 	.m-text-regular ul,

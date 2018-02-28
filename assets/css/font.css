@@ -1,32 +1,74 @@
 
+/**/
+
 @font-face {
-	font-family: 'fmco-leitura';
-	src: url('../fonts/354307_0_0.eot');
-	src: url('../fonts/354307_0_0.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/354307_0_0.woff2') format('woff2'),
-		url('../fonts/354307_0_0.woff') format('woff'),
-		url('../fonts/354307_0_0.ttf') format('truetype')
+	font-family: 'sonica-standard';
+	src: url('../fonts/Sonica-Standard-Thin.eot');
+	src: url('../fonts/Sonica-Standard-Thin.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Sonica-Standard-Thin.woff2') format('woff2'),
+		url('../fonts/Sonica-Standard-Thin.woff') format('woff'),
+		url('../fonts/Sonica-Standard-Thin.ttf') format('truetype')
+		;
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'sonica-standard';
+	src: url('../fonts/Sonica-Standard-Regular.eot');
+	src: url('../fonts/Sonica-Standard-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Sonica-Standard-Regular.woff2') format('woff2'),
+		url('../fonts/Sonica-Standard-Regular.woff') format('woff'),
+		url('../fonts/Sonica-Standard-Regular.ttf') format('truetype')
 		;
 	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
-	font-family: 'fmco-leitura';
-	src: url('../fonts/354307_1_0.eot');
-	src: url('../fonts/354307_1_0.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/354307_1_0.woff2') format('woff2'),
-		url('../fonts/354307_1_0.woff') format('woff'),
-		url('../fonts/354307_1_0.ttf') format('truetype');
+	font-family: 'sonica-standard';
+	src: url('../fonts/Sonica-Standard-Regular-Italic.eot');
+	src: url('../fonts/Sonica-Standard-Regular-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Sonica-Standard-Regular-Italic.woff2') format('woff2'),
+		url('../fonts/Sonica-Standard-Regular-Italic.woff') format('woff'),
+		url('../fonts/Sonica-Standard-Regular-Italic.ttf') format('truetype');
 	font-weight: 400;
 	font-style: italic;
 }
 @font-face {
-	font-family: 'fmco-leitura';
-	src: url('../fonts/354307_2_0.eot');
-	src: url('../fonts/354307_2_0.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/354307_2_0.woff2') format('woff2'),
-		url('../fonts/354307_2_0.woff') format('woff'),
-		url('../fonts/354307_2_0.ttf') format('truetype');
+	font-family: 'sonica-standard';
+	src: url('../fonts/Sonica-Standard-Black.eot');
+	src: url('../fonts/Sonica-Standard-Black.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Sonica-Standard-Black.woff2') format('woff2'),
+		url('../fonts/Sonica-Standard-Black.woff') format('woff'),
+		url('../fonts/Sonica-Standard-Black.ttf') format('truetype');
 	font-weight: 600;
+	font-style: normal;
+}
+
+
+/**/
+
+
+@font-face {
+	font-family: 'sonica-extended';
+	src: url('../fonts/Sonica-Extended-Ultra-Light.eot');
+	src: url('../fonts/Sonica-Extended-Ultra-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Sonica-Extended-Ultra-Light.woff2') format('woff2'),
+		url('../fonts/Sonica-Extended-Ultra-Light.woff') format('woff'),
+		url('../fonts/Sonica-Extended-Ultra-Light.ttf') format('truetype')
+		;
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'sonica-extended';
+	src: url('../fonts/Sonica-Extended-Thin.eot');
+	src: url('../fonts/Sonica-Extended-Thin.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Sonica-Extended-Thin.woff2') format('woff2'),
+		url('../fonts/Sonica-Extended-Thin.woff') format('woff'),
+		url('../fonts/Sonica-Extended-Thin.ttf') format('truetype')
+		;
+	font-weight: 200;
 	font-style: normal;
 }

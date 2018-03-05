@@ -171,7 +171,7 @@ ul.dash{
 	}
 	.sc {
 			font-weight: 800;
-		
+		font-size: 8px;
 	}
 	h1{
 		font-weight: 600;
@@ -223,7 +223,7 @@ ul.dash{
 	.text-regular span{
 	line-height: 24px;
 	font-size: 15px;
-			
+			font-weight: 400;
 		}
 		
 		
@@ -245,7 +245,7 @@ font-size: 32px;
 	.text-large span{
 		line-height: 28px;
 		font-size: 20px;
-		
+		font-weight: 400;
 	}
 	
 		

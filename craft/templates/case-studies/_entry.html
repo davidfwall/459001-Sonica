@@ -7,62 +7,87 @@
 <div class="page bg-white">
 
 {% for asset in entry.leadImage %}
-<div style="background-color: {{ entry.leadImage[0]|imageColor }};" class="lead-image">
+<div style="background-color: {{ entry.leadImage[0]|imageColor }};" class="lead-image show-on-desktops">
 <img class="" src="{{ asset.url('webMedium') }}" alt="{{entry.title}}" width="100%">
+</div>
+{% endfor %}
+
+{% for asset in entry.leadImage %}
+<div style="background-image: url('{{ asset.url('webMedium') }}')" class="hide-on-desktops square bg-cover bg-centered">
 </div>
 {% endfor %}
 
 
 
-
-<div class="entry-title white">
+<div class="entry-title white pad-top-25 m-pad-top-15">
 	<div class="row">
+		<div class="m-block">
 		<div class="three columns"><strong>{{entry.title | widont | raw}}</strong></div>
 		<div class="two columns end">{{entry.location | widont | raw}}</div>
+		</div>
 	</div>
 </div>
 
-<div class="row pad-top-2">
-	<div class="six columns">
-		{{entry.details}}
+<div class="m-block">
+
+	<div class="row pad-top-2 m-pad-top-2">
+		<div class="six columns">
+			{{entry.details}}
+		</div>
+		<div class="four columns offset-by-two fadeup slower">
+			<p class="orange text-medium m-text-regular m-pad-top-2">{{entry.quote}}</p>
+			<div class="text-small pad-top-5 m-pad-top-2"><strong>{{entry.quoteAttribution}}</strong>
+			</div>
+					<div class="m-vh-10 "></div>
+			
+		</div>
 	</div>
-	<div class="four columns offset-by-two fadeup slower">
-		<p class="orange text-medium">{{entry.quote}}</p>
-		<br />
-		<span class="text-small"><strong>{{entry.quoteAttribution}}</strong></span>
+		
+	<div class="row pad-top-15 text-small show-on-desktops">
+		<div class="three columns fadein fast">
+			<h3><strong>Size</strong></h3>
+			{{entry.size}}
+		</div>
+		<div class="three columns fadein">
+			<h3><strong>Timescale</strong></h3>
+			{{entry.timescale}}
+		</div>
+		<div class="three columns fadein slow end">
+			<h3><strong>Features</strong></h3>
+			{{entry.features}}
+		</div>
 	</div>
-</div>
 	
-<div class="row pad-top-15 text-small">
-	<div class="three columns fadein fast">
-		<h3><strong>Size</strong></h3>
-		{{entry.size}}
+	
+	<div class="row m-pad-bottom-10 text-small hide-on-desktops">
+		<div class="phone-two fadein fast">
+			<h3><strong>Size</strong></h3>
+			{{entry.size}}
+
+			<h3 class="m-pad-top-5"><strong>Timescale</strong></h3>
+			{{entry.timescale}}
+		</div>
+		<div class="phone-two fadein slow end">
+			<h3><strong>Features</strong></h3>
+			{{entry.features}}
+		</div>
 	</div>
-	<div class="three columns fadein ">
-		<h3><strong>Timescale</strong></h3>
-		{{entry.timescale}}
+
+	<div class="row pad-top-15">
+	<div class="twelve columns">
+		{% set numberOfPhotos = entry.projectImages|length %}
+		<ul class="image-grid images-{{numberOfPhotos}}" id="lightgallery">
+		{% for asset in entry.projectImages %}
+		<li>
+		<a href="{{ asset.url('webMedium') }}" style="background-image: url('{{ asset.url('webMedium') }}'); background-color: {{ entry.projectImages[0]|imageColor() }};" class="fadeup slow no_ul lg-link"></a>
+		</li>
+		{% endfor %}	
+		</ul>
 	</div>
-	<div class="three columns fadein slow end">
-		<h3><strong>Features</strong></h3>
-		{{entry.features}}
 	</div>
 	
-</div>
-	
-<div class="row pad-top-15">
-<div class="twelve columns">
-	{% set numberOfPhotos = entry.projectImages|length %}
-	<ul class="image-grid images-{{numberOfPhotos}}" id="lightgallery">
-	{% for asset in entry.projectImages %}
-	<li>
-	<a href="{{ asset.url('webMedium') }}" style="background-image: url('{{ asset.url('webMedium') }}'); background-color: {{ entry.projectImages[0]|imageColor() }};" class="fadeup slow no_ul lg-link"></a>
-	</li>
-	{% endfor %}	
-	</ul>
-</div>
-</div>
-	
+</div><!--End m block-->
 </div><!--End Page-->
-<div class="pad-top-30 bg-white"></div>
+<div class="pad-top-15 m-pad-top-15 bg-white"></div>
 
 {% endblock %}

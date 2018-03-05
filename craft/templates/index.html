@@ -25,7 +25,7 @@
 <div class="page">
 <div class="cover bg-orange"></div>
 
-<div class="row vh-95 m-vh-65">
+<div class="row vh-95 m-vh-90">
 	<div class="video-container">
 	<video autoplay muted playsinline loop>
 	<source src="{{ siteUrl }}assets/video/sonica-home-15.mp4" type="video/mp4">
@@ -36,13 +36,13 @@
 </div>
 <div class="row">
 	<ul class="block-grid two-up mobile bg-orange">
-		<li class="vh-65 m-vh-45 bg-white"><div class="row pad-top-1"><div class="nine columns end"><h1 class="text-xlarge orange text-extended">Expect more from your fit-out contractor.</h1></div></div></li>
+		<li class="vh-65 m-vh-35 bg-white"><div class="row pad-top-1 m-pad-top-5"><div class="m-block"><div class="nine columns end"><h1 class="text-xlarge orange text-extended">Expect more from your fit-out contractor.</h1></div></div></div></li>
 	{% for entry in craft.entries.section('caseStudies').limit(5) %}
 		<li class="vh-65 m-vh-45 bg-cover bg-centered" style="background-image: url('{% for asset in entry.leadImage %}{{ asset.url('webMedium') }}{% endfor %}');" >
 		<a href="{{ entry.url }}" class="vh-65 m-vh-45">
-		<div class="row white bg-fade vh-55 m-vh-40 pad-top-2">
+		<div class="row white bg-fade vh-55 m-vh-40 pad-top-2 m-pad-top-2"><div class="m-block">
 			<div class="five columns"><strong>{{ entry.title | widont | raw}}</strong></div>
-			<div class="five columns offset-by-one end">{{ entry.location | widont | raw}}</div>
+			<div class="five columns offset-by-one end">{{ entry.location | widont | raw}}</div></div>
 		</div>
 		</a>
 		</li>
@@ -50,9 +50,10 @@
 	{% for entry in craft.entries.section('caseStudies').offset(5) %}
 		<li class="vh-65 m-vh-45 bg-cover bg-centered fadein fast" style="background-image: url('{% for asset in entry.leadImage %}{{ asset.url('webMedium') }}{% endfor %}');" >
 		<a href="{{ entry.url }}" class="vh-65 m-vh-45">
-		<div class="row white bg-fade vh-55 m-vh-40 pad-top-2">
+		<div class="row white bg-fade vh-55 m-vh-40 pad-top-2 m-pad-top-2"><div class="m-block">
 			<div class="five columns"><strong>{{ entry.title | widont | raw}}</strong></div>
 			<div class="five columns offset-by-one end">{{ entry.location | widont | raw}}</div>
+			</div>
 		</div>
 		</a>
 		</li>

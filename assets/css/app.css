@@ -19,10 +19,10 @@ hr{
                                                                                                                                                        
 
 .m-block{
-	width: 86%;
+	width: 99%;
 	display: block;
 	clear: both;
-	margin-left: 7%;
+	margin-left: .5%;
 	}
 	
 /*------------------------
@@ -36,7 +36,6 @@ hr{
 .entry-title{
 	position: absolute;
 	top: 0;
-	padding-top: 27vh;
 	height: 40vh;
 	z-index: 5;
 	width: 100%;
@@ -82,22 +81,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c73f2102', e
 	display: none;
 }
 .video-container {
-  
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
+  width: 100%;
+  height: 100%; 
   overflow: hidden;
-  background: #000;
-  }
-  video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-  }
+}
+
+.video-container video {
+  /* Make video to at least 100% wide and tall */
+  min-width: 100%; 
+  min-height: 100%; 
   
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+  
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
   
 
 .bg-fade{
@@ -202,8 +209,8 @@ li{
 	inline
 -------------------------*/
 .inline{
-	display: inline!important;
-	margin-left: 0!important;
+	display: inline;
+	margin-right: 2%;
 }
 
 /*------------------------
@@ -220,7 +227,7 @@ header{
 	z-index: 10;
 }
 .sonica-logo{
-padding-top: 3vh;
+padding-top: 4vh;
 width: 99%;
 margin: auto;
 }
@@ -246,8 +253,8 @@ padding-top: 3vh;
 }
 */
 .sonica-logo a svg{
-		padding: 20px 0;
-	
+	padding-bottom: 20px;
+	padding-top: 10px;
 }
 .logo-orange-fill header .sonica-logo a{
 	fill: #f15a22;
@@ -261,13 +268,7 @@ padding-top: 3vh;
 	  fill: none;
 	
 }
-/*------------------------
-	inline
--------------------------*/
-.inline{
-	display: inline!important;
-	margin-left: 0!important;
-}
+
 
 /*------------------------
 	Wrapper
@@ -363,6 +364,14 @@ ABC sort
 	display: none;
 }
 
+/*------------------------
+Square
+-------------------------*/
+.square::after{
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+}
 
 /*------------------------
 images
@@ -387,7 +396,7 @@ border-radius: 25px;
 padding: 2px 15px;
 margin: 12px;
 bottom: 0;
-font-weight: 500;
+font-weight: 600;
 -webkit-transition:all .1s ease-in;  
 -moz-transition:all .1s ease-in;  
 -o-transition:all .1s ease-in;  
@@ -598,3 +607,47 @@ padding-bottom: 100%;
 } 
 
 
+
+
+
+
+@media only screen and (max-width: 768px) {
+.m-block{
+	width: 94%;
+	display: block;
+	clear: both;
+	margin-left: 3%;
+	}
+/*------------------------
+	inline
+-------------------------*/
+.inline{
+	display: inline;
+	margin-right: 1%;
+}
+
+.logo-white-stroke header .sonica-logo a{
+	stroke: white!important;
+	  stroke-width: .9;
+	  fill: none;
+	
+}
+.image-grid li a::before{
+content: '+ Enlarge';
+position: absolute;
+background: rgba(241, 89, 33, 0.5);
+color: white;
+font-size: 12px;
+border-radius: 25px;
+padding: 2px 15px;
+margin: 6px;
+bottom: 0;
+font-weight: 600;
+-webkit-transition:all .1s ease-in;  
+-moz-transition:all .1s ease-in;  
+-o-transition:all .1s ease-in;  
+transition:all .1s ease-in;
+	opacity: 0;
+}
+
+}

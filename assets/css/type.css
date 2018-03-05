@@ -154,8 +154,8 @@ ul.dash{
 
 @media (max-width: 768px) {
 	body{
-		font-size: 16px;
-		line-height: 28px;
+		font-size: 15px;
+		line-height: 24px;
 	}
 	.m-text-regular li{
 	width: 80%;
@@ -203,8 +203,8 @@ ul.dash{
 	.text-small a,
 	.text-small p,
 	.text-small span {
-	line-height: 20px;
-	font-size: 8px;
+	line-height: 21px;
+	font-size: 13px;
 	font-weight: 400;
 	}
 	.m-text-regular,
@@ -221,8 +221,8 @@ ul.dash{
 	.text-regular a,
 	.text-regular p,
 	.text-regular span{
-	line-height: 28px;
-	font-size: 16px;
+	line-height: 24px;
+	font-size: 15px;
 			
 		}
 		
@@ -243,8 +243,8 @@ font-size: 32px;
 	.text-large a,
 	.text-large p,
 	.text-large span{
-		line-height: 36px;
-		font-size: 24px;
+		line-height: 28px;
+		font-size: 20px;
 		
 	}
 	

@@ -7,7 +7,7 @@
 <div class="page bg-white">
 
 <div class="row pad-top-50 fade-in">
-	<div class="twelve columns text-large">
+	<div class="twelve columns text-large m-text-regular">
 		<p class="wide">At Sonica, we have the highest expectations of ourselves and our work, and complete confidence in our own ability to meet those expectations. That confidence is built on a wealth of expertise in every element of office fit-out from construction to site logistics to tech install. That confidence is built on clear communication, integrity and strong professional relationships. That confidence is built on the knowledge that by pulling in the same direction, our strengths are not just added together, but multiplied. That confidence is built on the experience of 150 completed fit-out projects – and counting.
 		</p>
 		<p>
@@ -18,7 +18,7 @@
 
 <div class="row pad-top-35 fadein fast">
 	<div class="four columns">
-		<h2 class="orange text-large text-extended">
+		<h2 class="orange text-large text-extended pad-top-neg-1">
 			Our Approach
 		</h2>
 	</div>
@@ -59,7 +59,7 @@
 
 <div class="row pad-top-35">
 	<div class="four columns fadeup slow">
-		<h2 class="orange text-large text-extended">
+		<h2 class="orange text-large text-extended pad-top-neg-1">
 			Our Team
 		</h2>
 	</div>
@@ -77,9 +77,9 @@
 		{% for entry in craft.entries.section('team') %}
 			<li class="text-small gridder-list" data-griddercontent="#{{entry.slug}}">
 				<img class="" src="{% for asset in entry.portraitImage %}{{ asset.url }}{% endfor %}" alt="{{entry.title}}" />
-				<a>{{ entry.title }}</a>
+				<a><strong>{{ entry.title }}</strong></a>
 				<br />
-				{{ entry.role }}
+				<strong>{{ entry.role }}</strong>
 				<br /><br />
 			</li>
 		{% endfor %}
@@ -91,13 +91,13 @@
 <div id="{{entry.slug}}" class="gridder-content">
     <div class="row text-small">
         <div class="three columns">
-            <p><span class="orange"><strong>My Job</strong></span> {{ entry.myJob }}</p>
+            <p><span class="orange"><strong>My Job</strong></span> {{ entry.myJob  | widont | raw}}</p>
         </div>
         <div class="three columns">
-            <p><span class="orange"><strong>Why Sonica?</strong></span> {{ entry.whySonica }}</p>
+            <p><span class="orange"><strong>Why Sonica?</strong></span> {{ entry.whySonica  | widont | raw}}</p>
            </div>
         <div class="three columns">
-            <p><span class="orange"><strong>What I Love Doing</strong></span> {{ entry.whatILoveDoing }}</p>
+            <p><span class="orange"><strong>What I Love Doing</strong></span> {{ entry.whatILoveDoing  | widont | raw}}</p>
         </div>
         <div class="three columns">
             <a href="mailto:{{ entry.email }}" class="orange">{{ entry.email }}</a>

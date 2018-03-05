@@ -16,7 +16,7 @@ body {
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	line-height: 31px;
-	font-size: 20px;
+	font-size: 19px;
 	
 }
 .text-extended {
@@ -27,7 +27,7 @@ font-family: 'sonica-extended', 'Helvetica Neue', Arial, sans-serif;
 text-rendering: optimizeLegibility;
 -webkit-font-smoothing: antialiased;
 line-height: 31px;
-font-size: 20px;
+font-size: 19px;
 	
 }
 p.wide{
@@ -35,7 +35,7 @@ p.wide{
 }
 p {
 hanging-punctuation: first;
-width: 95%;
+width: 92%;
 }
 .text-serif p, 
 p.text-serif{
@@ -45,7 +45,7 @@ p.text-serif{
 width: 100%;
 }
 .page p:nth-child(n+2) {
-	    text-indent: 45px;
+text-indent: 45px;
 	
 }
 .page h3 + p {text-indent: 0px!important}
@@ -102,7 +102,7 @@ ul.text-small li,
 .text-small p,
 .text-small span {
 line-height: 24px;
-font-size: 15px;
+font-size: 14px;
 font-weight: 400;
 }
 
@@ -127,7 +127,7 @@ ul.text-large li,
 .text-large p,
 .text-large span{
 	line-height: 52px;
-	font-size: 40px;
+	font-size: 38px;
 	font-weight: 200;
 }
 
@@ -154,7 +154,7 @@ ul.dash{
 
 @media (max-width: 768px) {
 	body{
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 28px;
 	}
 	.m-text-regular li{
@@ -222,7 +222,7 @@ ul.dash{
 	.text-regular p,
 	.text-regular span{
 	line-height: 28px;
-	font-size: 18px;
+	font-size: 16px;
 			
 		}
 		
@@ -242,7 +242,11 @@ font-size: 32px;
 	ul.text-large li,
 	.text-large a,
 	.text-large p,
-	.text-large span, 
+	.text-large span{
+		line-height: 36px;
+		font-size: 24px;
+		
+	}
 	
 		
 	.text-xlarge,
@@ -252,28 +256,10 @@ font-size: 32px;
 	.text-xlarge p,
 	.text-xlarge span
 	{
-		font-size: 50px;
-		line-height: 58px;
-	}
-	
-	.text-xxlarge,
-	.text-xxlarge ul,
-	ul.text-xxlarge li,
-	.text-xxlarge a,
-	.text-xxlarge p,
-	.text-xxlarge span,
-	
-	.text-xxxlarge,
-	.text-xxxlarge ul,
-	ul.text-xxxlarge li,
-	.text-xxxlarge a,
-	.text-xxxlarge p,
-	.text-xxxlarge span {
+line-height: 42px;
 font-size: 32px;
-line-height: 1;
-margin-left: -.5%;
-max-width: 90%;
 	}
+	
 	
 	
 	

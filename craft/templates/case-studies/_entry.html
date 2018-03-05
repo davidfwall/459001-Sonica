@@ -17,8 +17,8 @@
 
 <div class="entry-title white">
 	<div class="row">
-		<div class="three columns"><strong>{{entry.title}}</strong></div>
-		<div class="two columns end"><strong>{{entry.location}}</strong></div>
+		<div class="three columns"><strong>{{entry.title | widont | raw}}</strong></div>
+		<div class="two columns end">{{entry.location | widont | raw}}</div>
 	</div>
 </div>
 
@@ -29,7 +29,7 @@
 	<div class="four columns offset-by-two fadeup slower">
 		<p class="orange text-medium">{{entry.quote}}</p>
 		<br />
-		<span class="text-small">{{entry.quoteAttribution}}</span>
+		<span class="text-small"><strong>{{entry.quoteAttribution}}</strong></span>
 	</div>
 </div>
 	

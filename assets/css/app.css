@@ -49,6 +49,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3231600', e
 }
 
 /*------------------------
+	about intro
+-------------------------*/
+
+.intro p strong{
+	color:#f15a22;
+	font-weight: lighter;
+}
+
+/*------------------------
 	home
 -------------------------*/
 .cover{
@@ -705,6 +714,14 @@ font-weight: 600;
 -o-transition:all .1s ease-in-out;  
 transition:all .1s ease-in-out;
 	opacity: 0;
+}
+/*------------------------
+	about intro
+-------------------------*/
+
+.intro p strong{
+	color:#f15a22;
+	font-weight: 400;
 }
 
 }

@@ -33,6 +33,9 @@ font-size: 19px;
 p.wide{
 	width: 100%;
 }
+.wide p{
+	width: 100%;
+}
 p {
 hanging-punctuation: first;
 width: 92%;

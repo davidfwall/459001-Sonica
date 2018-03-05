@@ -21,6 +21,9 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  -webkit-text-stroke-width: 0px!important;
+  -webkit-text-stroke-color: inherit;
+  
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;

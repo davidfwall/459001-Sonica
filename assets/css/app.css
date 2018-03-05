@@ -39,11 +39,14 @@ hr{
 	height: 40vh;
 	z-index: 5;
 	width: 100%;
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3f2102+40,000000+84&0.78+9,0+88 */
-background: -moz-linear-gradient(top, rgba(63,33,2,0.78) 9%, rgba(63,33,2,0.47) 40%, rgba(0,0,0,0.04) 84%, rgba(0,0,0,0) 88%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, rgba(63,33,2,0.78) 9%,rgba(63,33,2,0.47) 40%,rgba(0,0,0,0.04) 84%,rgba(0,0,0,0) 88%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, rgba(63,33,2,0.78) 9%,rgba(63,33,2,0.47) 40%,rgba(0,0,0,0.04) 84%,rgba(0,0,0,0) 88%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c73f2102', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */}
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#231600+40,000000+84&0.7+22,0+88 */
+background: -moz-linear-gradient(top, rgba(35,22,0,0.7) 22%, rgba(35,22,0,0.51) 40%, rgba(0,0,0,0.04) 84%, rgba(0,0,0,0) 88%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(35,22,0,0.7) 22%,rgba(35,22,0,0.51) 40%,rgba(0,0,0,0.04) 84%,rgba(0,0,0,0) 88%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(35,22,0,0.7) 22%,rgba(35,22,0,0.51) 40%,rgba(0,0,0,0.04) 84%,rgba(0,0,0,0) 88%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3231600', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+
+}
 
 /*------------------------
 	home
@@ -114,6 +117,42 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c73f2102', e
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a63f2102', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 
 }
+
+.entry-grid{
+      background-size: auto 110%;
+      background-position: center left 0%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      
+}
+.entry-grid:hover{
+      background-size: auto 110%;
+       background-position: center left 5%;
+      
+}
+.entry-grid a strong{
+	position:relative;
+}
+.entry-grid a strong::after{
+content: "";
+width: 0%;
+background: #f15a22;
+height: 1px;
+position: absolute;
+bottom: -5px;
+left: 0;
+-webkit-transition:all .2s ease-in-out;  
+-moz-transition:all .2s ease-in-out;  
+-o-transition:all .2s ease-in-out;  
+transition:all .2s ease-in-out;
+}
+
+.entry-grid:hover a strong::after{
+content: "";
+width: 100%;
+
+
+}
 .h-100{
 	height: 65vh!important;
 }
@@ -158,34 +197,34 @@ li{
 }
 
 .faster{
-	-webkit-transition:all .1s ease-in;  
-	-moz-transition:all .1s ease-in;  
-	-o-transition:all .1s ease-in;  
-	transition:all .1s ease-in;
+	-webkit-transition:all .1s ease-in-out;  
+	-moz-transition:all .1s ease-in-out;  
+	-o-transition:all .1s ease-in-out;  
+	transition:all .1s ease-in-out;
 }
 .fast{
-	-webkit-transition:all .2s ease-in;  
-	-moz-transition:all .2s ease-in;  
-	-o-transition:all .2s ease-in;  
-	transition:all .2s ease-in;
+	-webkit-transition:all .2s ease-in-out;  
+	-moz-transition:all .2s ease-in-out;  
+	-o-transition:all .2s ease-in-out;  
+	transition:all .2s ease-in-out;
 }
 .slow{
-	-webkit-transition:all .5s ease-in;  
-	-moz-transition:all .5s ease-in;  
-	-o-transition:all .5s ease-in;  
-	transition:all .5s ease-in;
+	-webkit-transition:all .5s ease-in-out;  
+	-moz-transition:all .5s ease-in-out;  
+	-o-transition:all .5s ease-in-out;  
+	transition:all .5s ease-in-out;
 }
 .slower{
-	-webkit-transition:all .8s ease-in;  
-	-moz-transition:all .8s ease-in;  
-	-o-transition:all .8s ease-in;  
-	transition:all .8s ease-in;
+	-webkit-transition:all .8s ease-in-out;  
+	-moz-transition:all .8s ease-in-out;  
+	-o-transition:all .8s ease-in-out;  
+	transition:all .8s ease-in-out;
 }
 .slowest{
-	-webkit-transition:all 1s ease-in;  
-	-moz-transition:all 1s ease-in;  
-	-o-transition:all 1s ease-in;  
-	transition:all 1s ease-in;
+	-webkit-transition:all 1s ease-in-out;  
+	-moz-transition:all 1s ease-in-out;  
+	-o-transition:all 1s ease-in-out;  
+	transition:all 1s ease-in-out;
 }
 .loaded .inview{
 	opacity: 1;
@@ -212,6 +251,15 @@ li{
 	display: inline;
 	margin-right: 2%;
 }
+.inline-left{
+	display: inline;
+	margin-right: 2%;
+}
+.inline-right{
+	display: inline;
+	margin-left: 2%;
+}
+
 
 /*------------------------
 	Header
@@ -337,10 +385,10 @@ a{
 	text-decoration: none;
 	color: inherit;
 	border-bottom: 1px solid #f15a22;
-	-webkit-transition:all .1s ease-in;  
-	-moz-transition:all .1s ease-in;  
-	-o-transition:all .1s ease-in;  
-	transition:all .1s ease-in;
+	-webkit-transition:all .1s ease-in-out;  
+	-moz-transition:all .1s ease-in-out;  
+	-o-transition:all .1s ease-in-out;  
+	transition:all .1s ease-in-out;
 }
 a:hover, 
 a:focus{
@@ -397,10 +445,10 @@ padding: 2px 15px;
 margin: 12px;
 bottom: 0;
 font-weight: 600;
--webkit-transition:all .1s ease-in;  
--moz-transition:all .1s ease-in;  
--o-transition:all .1s ease-in;  
-transition:all .1s ease-in;
+-webkit-transition:all .1s ease-in-out;  
+-moz-transition:all .1s ease-in-out;  
+-o-transition:all .1s ease-in-out;  
+transition:all .1s ease-in-out;
 	opacity: 0;
 }
 .image-grid li a:hover::before{
@@ -626,6 +674,15 @@ padding-bottom: 100%;
 	margin-right: 1%;
 }
 
+.inline-left{
+	display: inline;
+	margin-right: 1%;
+}
+.inline-right{
+	display: inline;
+	margin-left: 1%;
+}
+
 .logo-white-stroke header .sonica-logo a{
 	stroke: white!important;
 	  stroke-width: .9;
@@ -643,10 +700,10 @@ padding: 2px 15px;
 margin: 6px;
 bottom: 0;
 font-weight: 600;
--webkit-transition:all .1s ease-in;  
--moz-transition:all .1s ease-in;  
--o-transition:all .1s ease-in;  
-transition:all .1s ease-in;
+-webkit-transition:all .1s ease-in-out;  
+-moz-transition:all .1s ease-in-out;  
+-o-transition:all .1s ease-in-out;  
+transition:all .1s ease-in-out;
 	opacity: 0;
 }
 

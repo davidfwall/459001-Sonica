@@ -4,11 +4,18 @@
 				<div class="nav">
 					<div class="row bg-orange white">
 					<div class="m-block">
-						<div class="twelve columns">
+						<div class="six columns phone-two">
 			        	<ul class="sc text-extended">
-			        		<li class="inline"><a href="{{ siteUrl }}" class="{% if craft.request.firstSegment == 'case-studies' %}active {% endif %}no_ul">Case Studies</a></li>
-			        		<li class="inline"><a href="{{ url('about') }}" class="{% if craft.request.firstSegment == 'about' %}active {% endif %}no_ul">About Us</a></li>
+			        		<li class="inline-left"><a href="{{ siteUrl }}" class="{% if craft.request.firstSegment == 'case-studies' %}active {% endif %}no_ul">Case Studies</a></li>
+			        		<li class="inline-left"><a href="{{ url('about') }}" class="{% if craft.request.firstSegment == 'about' %}active {% endif %}no_ul">About Us</a></li>
 			        	</ul>
+			        	</div>
+			        	<div class="six columns phone-two text-right">
+			        	<ul class="sc">
+			        	<li class="inline-right"><a href="tel:{{ contactDetails.phone }}">{{ contactDetails.phone }}</a></li>
+			        	<li class="inline-right"><a href="{{ contactDetails.linkedin }}" target="_blank" class="no_ul"><span class="icon-linkedin"></span> &nbsp;</a>
+			        	<a href="{{ contactDetails.instagram }}" target="_blank" class="no_ul"><span class="icon-instagram"></span> &nbsp;</a>
+			        	</li>
 			        	</div>
 			        </div>
 			        </div>

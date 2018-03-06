@@ -7,8 +7,7 @@
 <div class="page bg-white">
 
 {% for asset in entry.leadImage %}
-<div style="background-color: {{ entry.leadImage[0]|imageColor }};" class="lead-image show-on-desktops">
-<img class="" src="{{ asset.url('webMedium') }}" alt="{{entry.title}}" width="100%">
+<div style="background-color: {{ entry.leadImage[0]|imageColor }}; background-image: url('{{ asset.url('webMedium') }}'); padding-top: {{asset.height / asset.width * 100}}%;" class="lead-image show-on-desktops">
 </div>
 {% endfor %}
 
@@ -86,6 +85,19 @@
 	</div>
 	</div>
 	
+	
+	{% set params = {section: 'caseStudies', limit: null} %}
+	{% set entry_prev = entry.getPrev(params) %}
+	{% set entry_next = entry.getNext(params) %}		
+	{% if entry_next %}
+	
+	<div class="row pad-top-10 m-pad-top-10 fadeup slow"> 
+			<div class="six columns offset-by-six end">
+				<a href="{{entry_next.url}}">Next: <strong>{{ entry_next.title }}</strong></a>
+			</div>
+	</div>
+	{% endif %}
+		
 </div><!--End m block-->
 </div><!--End Page-->
 <div class="pad-top-15 m-pad-top-15 bg-white"></div>

@@ -1,10 +1,13 @@
-<!DOCTYPE html>
+{% cache %}
+	{% minify %}
+	<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	{% hook 'seomaticRender' %}
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,700" rel="stylesheet">
 
+{% filter minimee %}
 	<link rel="stylesheet" href="{{ siteUrl }}assets/css/font.css">
 	<link rel="stylesheet" href="{{ siteUrl }}assets/css/reset.css">
 	<link rel="stylesheet" href="{{ siteUrl }}assets/css/animations.css">
@@ -13,10 +16,11 @@
 	<link rel="stylesheet" href="{{ siteUrl }}assets/css/type.css">
 	<link rel="stylesheet" href="{{ siteUrl }}assets/css/grid-twelve.css" />
 	<link rel="stylesheet" href="{{ siteUrl }}assets/css/social-icons.css" />
-	<link rel="stylesheet" href="{{ siteUrl }}assets/css/form.css" />
+{#	<link rel="stylesheet" href="{{ siteUrl }}assets/css/form.css" />#}
 	<link rel="stylesheet" href="{{ siteUrl }}assets/css/gridder.css" />
 	<link rel="stylesheet" href="{{ siteUrl }}assets/css/lightgallery.css" />
 	<link rel="stylesheet" href="{{ siteUrl }}assets/css/app.css" />
+{% endfilter %}
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" href="{{ siteUrl }}assets/css/ie.css">
 	<![endif]-->
@@ -27,6 +31,7 @@
 	<!--[if lt IE 9]>
 		<script src="{{ siteUrl }}assets/js/html5shiv.min.js"></script>
 	<![endif]-->
+
 
 <!-- Jquery -->
 <script src="{{ siteUrl }}assets/js/jquery.min.js"></script>
@@ -50,10 +55,18 @@
 	</div>
 	
 
-
-
+{% filter minimee %}
 <!-- inview -->
 <script src="{{ siteUrl }}assets/js/jquery.inview.min.js"></script>
+<!-- gridder -->
+<script src="{{ siteUrl }}assets/js/jquery.gridder.min.js"></script>
+<!-- Lightgallery -->
+<script src="{{ siteUrl }}assets/js/lightgallery.min.js"></script>
+ <!-- Cookie for intro animation-->
+<script src="{{ siteUrl }}assets/js/cookie.js"></script>
+{% endfilter %}
+
+<!-- inview -->
 <script type="text/javascript">
 $('.fadein, .fadeup').bind('inview', function (event, visible, topOrBottomOrBoth) {
   if (visible == true) {
@@ -73,7 +86,6 @@ $('.fadein, .fadeup').bind('inview', function (event, visible, topOrBottomOrBoth
 
 
 <!-- gridder -->
-<script src="{{ siteUrl }}assets/js/jquery.gridder.min.js"></script>
 <script>
     jQuery(document).ready(function ($) {
         // Call Gridder
@@ -88,8 +100,7 @@ $('.fadein, .fadeup').bind('inview', function (event, visible, topOrBottomOrBoth
     });
 </script>
 
-<script src="{{ siteUrl }}assets/js/lightgallery.min.js"></script>
-
+<!-- Lightgallery -->
 <script type="text/javascript">
     $(document).ready(function() {
         $("#lightgallery").lightGallery({
@@ -127,7 +138,6 @@ $(document).ready(function () {
 
 
  <!-- Cookie for intro animation-->
-<script src="{{ siteUrl }}assets/js/cookie.js"></script>
 
 <script>
 // Landing page cookie
@@ -143,6 +153,7 @@ function landingSlide() {
 landingSlide();
 </script>
 
-
 </body>
 </html>
+	{% endminify %}
+{% endcache %}

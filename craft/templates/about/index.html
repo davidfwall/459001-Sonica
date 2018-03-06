@@ -13,44 +13,31 @@
 	</div>
 
 
-<div class="row pad-top-35 m-pad-top-15 fadein fast">
+<div class="row pad-top-35 m-pad-top-15 fadeup slow">
 	<div class="four columns tablet-four">
 		<h2 class="orange text-large text-extended pad-top-neg-1">
 			Our Approach
 		</h2>
 	</div>
+	{% for row in aboutUs.approach.limit(2) %}
 	<div class="four columns tablet-two">
-		<h3 class="m-pad-top-5"><strong><span class="orange">1. </span>Discovery</strong></h3>
-		<p>A great office fit-out begins by getting to know you and your unique needs. We believe that by listening to you and asking the right questions we can form an understanding of what your individual project requires.</p>
+		<h3 class="m-pad-top-5"><strong><span class="orange">{{loop.index}}. </span>{{ row.approachTitle }}</strong></h3>
+		{{ row.description }}
+		<div class="vh-5"></div>
 	</div>
-	<div class="four columns tablet-two">
-		<h3 class="m-pad-top-5"><strong><span class="orange">2. </span>Planning</strong></h3>
-		<p>When we receive your brief, our first order of business is to assemble an in-house team for your project. We draw on our extensive experience to put together the right staff to handle the individual complexities of your fit-out, before formulating an execution plan and setting delivery targets in stone.
-		</p>
-	</div>
-	</div>
-<div class="row pad-top-5 fadein fast">
-	<div class="four columns tablet-two">
-		<h3 class="m-pad-top-5"><strong><span class="orange">3. </span>Costing</strong></h3>
-		<p>We have an extensive roster of sub-contract partners from whom we assemble the right team for the parameters of your job. Sonica’s Surveying Team then analyses the costings provided by our partners to produce a detailed budget recommendation, which we will present to you to review and sign-off.
-		</p>
-		<p>The whole process is transparent and allows you to retain complete control of expenditure.
-		</p>
-	</div>
-	<div class="four columns tablet-two">
-		<h3 class="m-pad-top-5"><strong><span class="orange">4. </span>Construction</strong></h3>
-		<p>Before any trade works begin on your site, we organise a ramp-up period. This helps us ensure that all our partners begin your project with clarity of purpose, and helps us maintain our impeccable safety record.
-		</p>
-		<p>Once works begin, our Site Operations Team will provide you with comprehensive weekly reports detailing construction progress and cumulative hours that completed accident-free on your site. Completing your project on-time, on-budget, and accident-free is our only objective.
-		</p>
-	</div>
-	<div class="four columns tablet-two">
-		<h3 class="m-pad-top-5"><strong><span class="orange">5. </span>Hand-Over</strong></h3>
-		<p>At Sonica, when we handover your project it means it is 100% finished: no snag lists, no late arrivals. We provide pre-handover training for new installation features for you and your staff, and we’re always happy to help you bed into your new work space and deal with any queries you might have.	We believe that diligent organisation is the key to meeting schedules and mitigating against anything getting left behind. 
-		</p><p>
-		We take pride in making your project our best one yet.
-			</p>
-	</div>
+	{% endfor %}
+</div>
+<div class="row pad-top-5 fadeup slow">
+{% set count = 3 %}
+{% for row in aboutUs.approach.offset(2) %}
+
+<div class="four columns tablet-two">
+	<h3 class="m-pad-top-5"><strong><span class="orange">{{count}}. </span>{{ row.approachTitle }}</strong></h3>
+	{{ row.description }}
+	<div class="vh-5"></div>
+</div>
+{% set count = 3 + loop.index %}
+{% endfor %}
 </div>
 
 
@@ -111,10 +98,8 @@
 <div class="row pad-top-5 pad-bottom-15 m-pad-top-5 m-pad-bottom-15 fadein">
 <div class="twelve columns">
 <ul class="css-four-columns m-css-two-columns" id="abcsort">
-{% for entry in craft.entries.section('settings') %}
-{% for row in entry.projectsCompleted %}
+{% for row in projectList.projectsCompleted %}
     <li><span class="title">{{ row.projectName }}</span></li>
-{% endfor %}
 {% endfor %}
 
 {% for entry in craft.entries.section('caseStudies').order('title').find() %}

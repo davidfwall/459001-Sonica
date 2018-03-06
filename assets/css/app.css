@@ -129,14 +129,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3231600', e
 
 .entry-grid{
       background-size: auto 110%;
-      background-position: center left 0%;
+      background-position: top 0% center;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       
 }
 .entry-grid:hover{
       background-size: auto 110%;
-       background-position: center left 5%;
+       background-position: top 15% center;
       
 }
 .entry-grid a strong{
@@ -159,9 +159,36 @@ transition:all .2s ease-in-out;
 .entry-grid:hover a strong::after{
 content: "";
 width: 100%;
-
-
 }
+
+.entry-grid a .location{
+	position:relative;
+}
+.entry-grid a .location::after{
+content: "";
+width: 0%;
+background: #f15a22;
+height: 1px;
+position: absolute;
+bottom: -5px;
+left: 0;
+-webkit-transition:all .2s ease-in-out;  
+-moz-transition:all .2s ease-in-out;  
+-o-transition:all .2s ease-in-out;  
+transition:all .2s ease-in-out;
+
+
+-webkit-transition-delay: .1s;
+-moz-transition-delay: .1s;
+-o-transition-delay: .1s;
+transition-delay: .1s;
+}
+
+.entry-grid:hover a .location::after{
+content: "";
+width: 100%;
+}
+
 .h-100{
 	height: 65vh!important;
 }

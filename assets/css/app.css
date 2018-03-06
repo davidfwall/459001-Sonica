@@ -315,6 +315,16 @@ padding-top: 4vh;
 width: 99%;
 margin: auto;
 }
+
+.sonica-logo{
+
+transform: translateY(var(--translateY));
+will-change: transform;
+}
+
+
+
+
 /*
 .home .sonica-logo{
 padding-top: 35vh;
